@@ -1,0 +1,49 @@
+/*Variables*/
+
+:root {
+  --white: #FFF;
+  --black: #000;
+
+  --eggshell: #EEE8D6;
+  --darkblue: #022933;
+  --yellow: #F3D350;
+  --blue: #0076A3;
+  --green: #BFC406;
+  --orange: #DC762B;
+  --red: #D14348;
+  --purple: #6D73C2;
+
+  --color-light: var(--white);
+  --color-dark: var(--black);
+  --color-main: var(--color-light);
+  --color-background: var(--blue);
+  --color-links: var(--yellow);
+  --color-navigation-links: var(--blue);
+
+  --font-size-base: 1.3rem;
+  --line-height-base: 150%;
+  --font-primary: "Work Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --font-weight-light: 100;
+  --font-weight-normal: 300;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+ /*custom properties*/
+  --container-small-width:50%;
+  --container-default-width: 90%;
+  --container-max-width: 1200px;
+
+  --width-standard: {
+    width: var(--container-default-width);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+  }
+/*Custom media*/
+  @custom-media --viewport-small (width >= 576px);
+  @custom-media --viewport-medium (width >= 768px);
+  @custom-media --viewport-large (width >= 992px);
+  @custom-media --viewport-extralarge (width >= 1200px);  
+
+  @custom-selector :--headings h1, h2, h3, h4, h5, h6;
+} /* root */

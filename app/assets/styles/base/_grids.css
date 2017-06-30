@@ -1,0 +1,179 @@
+
+/*
+we can specify global variable to use flexbox as default instead of floats
+
+@lost flexbox flex;
+*/
+
+/* Grids */
+
+.grid-item {
+	background: color(#2c3e50 tint(30%));
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.grid-one {
+	width: 100%;
+	lost-utility: clearfix; /* must be declared on parent*/
+}
+
+.grid-one div {
+	lost-column: 1/1;
+
+	@media (--viewport-small) {
+		lost-column: 1/2;
+	}
+	@media (--viewport-medium) {
+		lost-column: 1/3;
+	}
+	@media (--viewport-large) {
+		lost-column: 1/6;
+	}
+}
+
+.nested-grid {
+	background: red;
+	height: 50px;
+	margin-bottom: 10px;
+}
+ /*		VERTICAL GRID 		*/ 
+.grid-two {
+	width: 100%;
+	height: 500px;
+	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
+	lost-center:80% 3rem;
+	padding-top: 3rem;
+	background: color(white shade(35%));
+}
+
+.grid-two div {
+	/* lost row is for vertical grid */
+	lost-row: 1/5;
+	lost-align: center;
+}
+
+.grid-two div p{
+	margin: 0;
+}
+
+/*  Waffle Grid*/
+
+
+.grid-three {
+	width: 100%;
+	lost-center: 80% 3rem;
+	height: 100vh;
+}
+
+.grid-three div {
+	lost-column: 1/1;
+	font-size: 2em;
+	background: color(orange shade(35%));
+
+	@media (--viewport-small) {
+		lost-column: 1/2;
+	}
+	@media (--viewport-medium) {
+		lost-column: 1/3;
+	}
+	@media (--viewport-large) {
+		lost-waffle: 1/4;
+	}
+}
+
+/*  Flexbox Grid  */
+
+.grid-four {
+	width: 100%;
+	lost-center: 80% 3rem flex;
+	height: 60vh;
+}
+
+.grid-four div {
+	lost-column: 1/1;
+	font-size: 2em;
+	background: color(teal shade(20%));
+
+	@media (--viewport-small) {
+		lost-column: 1/2;
+	}
+	@media (--viewport-medium) {
+		lost-column: 1/3;
+	}
+	@media (--viewport-large) {
+		lost-column: 1/4 4 30px flex;
+	}
+}
+
+/* html setup */
+/*<div>
+        <section class="grid-one">
+        <div class="grid-item">
+            <div class="nested-grid"></div>
+            <div class="nested-grid"></div>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </section>
+    <section class="grid-one">
+        <div class="grid-item">
+            <div class="nested-grid"></div>
+            <div class="nested-grid"></div>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </section>
+    </div>
+
+    <div>
+        <section class="grid-two">
+        <div class="grid-item">
+            <div class="nested-grid"></div>
+            <div class="nested-grid"></div>
+        </div>
+        <div class="grid-item"><p>This is paragraph!</p></div>
+        <div class="grid-item"><p>This is paragraph!</p></div>
+        <div class="grid-item"><p>This is paragraph!</p></div>
+    </section>
+    </div>
+
+    <div>
+        <section class="grid-three">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+    </section>
+    </div>
+
+    <div>
+        <section class="grid-four">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+    </section>
+    </div>*/
