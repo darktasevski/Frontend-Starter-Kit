@@ -28,6 +28,7 @@
     "lost": "^8.0.0",
     "path": "^0.12.7",
     "postcss-cssnext": "^2.11.0",
+    "postcss-font-magician": "^2.0.0",
     "postcss-partial-import": "^4.1.0",
     "postcss-reporter": "^4.0.0",
     "postcss-url": "^7.0.0",

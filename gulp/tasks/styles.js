@@ -4,6 +4,7 @@ var gulp 		 	= require('gulp'),
 	postcss 	 	= require('gulp-postcss'),
 	cssnext		 	= require('postcss-cssnext'),
 	rucksack		= require('rucksack-css'),
+	fontMagician	= require('postcss-font-magician'),
 	postcssurl	   	= require('postcss-url'),
 	reporter	 	= require("postcss-reporter"),
 	sourcemaps	 	= require('gulp-sourcemaps');
@@ -20,12 +21,13 @@ gulp.task('styles', function(){
 		.pipe( sourcemaps.init())
 		.pipe(postcss([
 			require('postcss-partial-import')({prefix: '_', extension: '.css'}),
-				postcssurl(),					
-					cssnext(),
-						rucksack(),
-							require('postcss-nesting'),
-								lost(), // lost must be after nesting, so that media queries can work with it
-									reporter()
+				postcssurl(),	
+					fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 		
+						cssnext(),	// http://cssnext.io/features/
+							rucksack(), // http://simplaio.github.io/rucksack/docs/#
+								require('postcss-nesting'),
+									lost(), // lost must be after nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
+										reporter()
 			]))
 		.on('error', gutil.log, function(err){
 			this.emit('end');
