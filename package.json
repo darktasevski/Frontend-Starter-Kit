@@ -8,6 +8,7 @@
   },
   "author": "Puritanic",
   "license": "ISC",
+  "browserslist": "last 2 versions",
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
@@ -29,6 +30,7 @@
     "path": "^0.12.7",
     "postcss-cssnext": "^2.11.0",
     "postcss-font-magician": "^2.0.0",
+    "postcss-normalize": "^4.0.0",
     "postcss-partial-import": "^4.1.0",
     "postcss-reporter": "^4.0.0",
     "postcss-url": "^7.0.0",
