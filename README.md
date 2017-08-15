@@ -17,23 +17,24 @@ After you clone or download this repository, you can kickstart your project just
 ### Gulp Tasks
 
 #### gulp watch
-The basic usage of Frontend Starter Kit starts with `gulp watch` task, and it's the main gulp task. I usually start with this one first, and I recommend keeping this one turned on while you are working on your code, because it starts [Browsersync](https://www.browsersync.io) server on `localhost://3000` and are syncing with your work everytime it's saved. Depending on what file you've just saved it starts gulp styles or gulp scripts tasks automatically.
+The basic usage of Frontend Starter Kit starts with `gulp watch` task, and it's the main gulp task. I usually start with this one first, and I recommend keeping this one turned on while you are working on your code, because it starts [Browsersync](https://www.browsersync.io) server on `localhost://3000` and are syncing with your work everytime it's saved. Depending on what file you've just saved it starts gulp styles or gulp scripts tasks automatically (sort of live-reload like). 
 
 __Usage__: just type in terminal `gulp watch` .
 
 #### gulp styles
-This task starts CSS processing featuring [PostCss](https://github.com/postcss/postcss) and its [postcss-cssnext](https://github.com/MoOx/postcss-cssnext) plugin which allows you to use CSS syntax that isn't supported yet, but will be, so while working with new syntax you will learn it for tomorrow. This is how proccesing tree looks like: 
+This task starts CSS processing, which process your code through few postcss plugins one by one. Code is being transpiled to CSS supported syntax, vendor prefixes are added for some properties, and a bunch of other things that you can look up in plugins docs.
+This is how proccesing tree looks like: 
 ```
 .pipe(postcss([
-			require('postcss-partial-import')({prefix: '_', extension: '.css'}),
-				postcssurl(),
-					require('postcss-normalize')({browsers: 'last 2 versions'}),	
-						fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 		
-							cssnext(),	// http://cssnext.io/features/
-								rucksack(), // http://simplaio.github.io/rucksack/docs/#
-									require('postcss-nesting'),
-										lost(), // lost must be after nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
-											reporter()
+	require('postcss-partial-import')({prefix: '_', extension: '.css'}),
+		postcssurl(),
+			require('postcss-normalize')({browsers: 'last 2 versions'}),	
+				fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 
+					cssnext(),	// http://cssnext.io/features/
+						rucksack(), // http://simplaio.github.io/rucksack/docs/#
+							require('postcss-nesting'),
+								lost(), 
+									reporter()
 			]))
 ```
 I'll explain shortly what each of this plugins do.
@@ -44,14 +45,16 @@ I'll explain shortly what each of this plugins do.
 
 [fontMagician(https://github.com/jonathantneal/postcss-font-magician)]()  plugin that magically generates all of your @font-face rules.
 
-[cssnext()](https://github.com/postcss/postcss) PostCSS-cssnext is a PostCSS plugin that helps you to use the latest CSS syntax today. It transforms CSS specs into more compatible CSS so you don’t need to wait for browser support. REally powerfull plugin with long list of [features](http://cssnext.io/features/).
+[cssnext()](https://github.com/postcss/postcss) PostCSS-cssnext is a PostCSS plugin that helps you to use the latest CSS syntax today. It transforms CSS specs into more compatible CSS so you don’t need to wait for browser support. Really powerfull plugin with long list of [features](http://cssnext.io/features/).
 
 [rucksack()](https://github.com/seaneking/rucksack) A plugin pack similar to postcss-cssnext, featuring incredible __responsive 
 typography__.
 
 [('postcss-nesting')](https://github.com/jonathantneal/postcss-nesting) allows writing nested CSS.
 
-[lost()](http://lostgrid.org) the must if you are planning to work with grids!
+[lost()](http://lostgrid.org) the must if you are planning to work with grids! PS: lost must be loaded after postcss-nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
+
+__Usage:__ `gulp styles`
 
 #### gulp scripts
 
@@ -59,53 +62,26 @@ typography__.
 
 __Usage:__ `gulp scripts`
 
+#### gulp modernizr 
 
+`gulp modernizr` provides support for older browsers( IE6, IE7.. ) that doesnt support flexbox or other new CSS and Js stuff. This task is started automaticaly each time a js file is saved while in `gulp watch` mode, but it cant be started manually with `gulp modernizr` command.
 
+#### gulp build
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+`gulp build` task triggers building a docs directory in which all files are moved from development to production, CSS/HTML and Js are minified and optimized, images and icons are compressed and new source paths are build in index.html with help of [usemin](https://github.com/zont/gulp-usemin). The docs folder is the folder with files that end user is going to use.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Fork it if you can see a way to improve it or suggest improvenments, PR's are welcome.
 
 ## Changelog
 
-v 1.1 added Font Magician PostCss plugin to bundle.
+v 1.04 added Font Magician PostCss plugin to bundle.
 v 1.0 commited initial setup to Github. 
 
-## Authors
+## Author
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Darkø Tasevski** - *Initial work* - [Puritanic](https://github.com/Puritanic)
 
 ## License
 
@@ -113,7 +89,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
-
+* Hat tip to everyone who's code was used!
