@@ -1,3 +1,1 @@
-import $ from './vendor/jquery-1.12.0.min';
-
-
+import $ from './vendor/jquery-3.2.1.min';

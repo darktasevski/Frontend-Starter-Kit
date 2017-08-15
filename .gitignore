@@ -10,6 +10,7 @@
 *~
 *.sass-cache
 node_modules/
+.vscode/
 .tmp/
 .env
 

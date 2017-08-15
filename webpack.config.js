@@ -10,15 +10,19 @@ module.exports = {
 		filename: "[name].js"
 	},
 	module: {
-		loaders: [
-			{
-				loader: 'babel-loader',
-				query: {
-					presets: ['es2015']
-				},
-				test: /\.js$/,
-				exclude: /node_modules/
-			}
-		]
+		loaders: [{
+			loader: 'babel-loader',
+			query: {
+				presets: [
+					["env", {
+						"targets": {
+							"browsers": ["last 2 versions", "safari >= 7"]
+						}
+					}]
+				]
+			},
+			test: /\.js$/,
+			exclude: /node_modules/
+		}]
 	}
 }

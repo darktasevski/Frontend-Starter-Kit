@@ -3,7 +3,8 @@ browserSync	 	= require('browser-sync').create(),
 imagemin 		= require('gulp-imagemin'),
 cssNano	 		= require('gulp-cssnano'),
 usemin 	 		= require('gulp-usemin'),
-uglify		 	= require('gulp-uglify'),
+minify 			= require("gulp-babel-minify"),
+htmlmin 		= require('gulp-htmlmin'),
 del 	 		= require('del'),
 rev		 		= require('gulp-rev');
 
@@ -56,9 +57,14 @@ gulp.task('useminTrigger', ['deleteDist'], function(){
 
 gulp.task('usemin', ['styles', 'scripts'], function(){
 	return gulp.src('./app/index.html')
+		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(usemin({
 			css: [ function(){return rev()}, function(){ return cssNano()}],
-			js: [ function(){return rev()}, function(){ return uglify()}]
+			js: [ function(){return rev()}, function(){ return minify(({
+				mangle: {
+				  keepClassName: true
+				}
+			  }))}]
 		}))
 		.pipe(gulp.dest('./docs'));
 });
