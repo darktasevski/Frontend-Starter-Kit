@@ -55,6 +55,11 @@ typography__.
 
 #### gulp scripts
 
+`gulp scripts` task is compiling all javascript files into one main file`( temp/scripts/App.js )` and while on it transpiling all ES6 code to ES5 through Webpack/Babel, so we can use new ES6 syntax in our work and not worry about browser support.
+
+__Usage:__ `gulp scripts`
+
+
 
 
 ## Running the tests
