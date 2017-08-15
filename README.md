@@ -76,8 +76,8 @@ Fork it if you can see a way to improve it or suggest improvenments, PR's are we
 
 ## Changelog
 
-v 1.04 added Font Magician PostCss plugin to bundle.
-v 1.0 commited initial setup to Github. 
+* v 1.04 added Font Magician PostCss plugin to bundle.
+* v 1.0 commited initial setup to Github. 
 
 ## Author
 
