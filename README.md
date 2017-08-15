@@ -17,7 +17,7 @@ After you clone or download this repository, you can kickstart your project just
 ### Gulp Tasks
 
 #### gulp watch
-The basic usage of Frontend Starter Kit starts with `gulp watch` task, and it's the main gulp tasks. I usually start with this one first, and I recommend keeping this one turned on while you are working on your code, because it starts its own server on `localhost://3000` and are syncing with your work everytime it's saved. Depending on what file you've just saved it starts gulp styles or gulp scripts tasks automatically.
+The basic usage of Frontend Starter Kit starts with `gulp watch` task, and it's the main gulp task. I usually start with this one first, and I recommend keeping this one turned on while you are working on your code, because it starts [Browsersync](https://www.browsersync.io) server on `localhost://3000` and are syncing with your work everytime it's saved. Depending on what file you've just saved it starts gulp styles or gulp scripts tasks automatically.
 
 __Usage__: just type in terminal `gulp watch` .
 
