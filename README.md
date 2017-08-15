@@ -37,13 +37,21 @@ This task starts CSS processing featuring [PostCss](https://github.com/postcss/p
 			]))
 ```
 I'll explain shortly what each of this plugins do.
-`[postcssurl()](https://github.com/postcss/postcss-url)` Allows you to fix url()s according to postcss to and/or from options (rebase to to first if available, otherwise from or process.cwd()).
-`[('postcss-normalize')](https://github.com/jonathantneal/postcss-normalize)` PostCSS Normalize lets you use the parts of normalize.css you need, based on your project’s browserlist. You can specify which versions of browsers are you going to support in options like this `require('postcss-normalize')({browsers: 'last 2 versions'})`.
-`[fontMagician(https://github.com/jonathantneal/postcss-font-magician)]()`  plugin that magically generates all of your @font-face rules.
-`[cssnext()](https://github.com/postcss/postcss)` PostCSS-cssnext is a PostCSS plugin that helps you to use the latest CSS syntax today. It transforms CSS specs into more compatible CSS so you don’t need to wait for browser support. REally powerfull plugin with long list of [features](http://cssnext.io/features/).
-`[rucksack()](https://github.com/seaneking/rucksack)` A plugin pack similar to postcss-cssnext, featuring incredible __responsive typography__.
-`[('postcss-nesting')](https://github.com/jonathantneal/postcss-nesting)` allows writing nested CSS.
-`[lost()](http://lostgrid.org)` the must if you are planning to work with grids!
+
+[postcssurl()](https://github.com/postcss/postcss-url) Allows you to fix url()s according to postcss to and/or from options (rebase to to first if available, otherwise from or process.cwd()).
+
+[('postcss-normalize')](https://github.com/jonathantneal/postcss-normalize) PostCSS Normalize lets you use the parts of normalize.css you need, based on your project’s browserlist. You can specify which versions of browsers are you going to support in options like this `require('postcss-normalize')({browsers: 'last 2 versions'})`.
+
+[fontMagician(https://github.com/jonathantneal/postcss-font-magician)]()  plugin that magically generates all of your @font-face rules.
+
+[cssnext()](https://github.com/postcss/postcss) PostCSS-cssnext is a PostCSS plugin that helps you to use the latest CSS syntax today. It transforms CSS specs into more compatible CSS so you don’t need to wait for browser support. REally powerfull plugin with long list of [features](http://cssnext.io/features/).
+
+[rucksack()](https://github.com/seaneking/rucksack) A plugin pack similar to postcss-cssnext, featuring incredible __responsive 
+typography__.
+
+[('postcss-nesting')](https://github.com/jonathantneal/postcss-nesting) allows writing nested CSS.
+
+[lost()](http://lostgrid.org) the must if you are planning to work with grids!
 
 #### gulp scripts
 
