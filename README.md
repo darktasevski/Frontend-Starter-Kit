@@ -43,7 +43,7 @@ I'll explain shortly what each of this plugins do.
 
 [('postcss-normalize')](https://github.com/jonathantneal/postcss-normalize) PostCSS Normalize lets you use the parts of normalize.css you need, based on your project’s browserlist. You can specify which versions of browsers are you going to support in options like this `require('postcss-normalize')({browsers: 'last 2 versions'})`.
 
-[fontMagician(https://github.com/jonathantneal/postcss-font-magician)]()  plugin that magically generates all of your @font-face rules.
+[fontMagician](https://github.com/jonathantneal/postcss-font-magician) plugin that magically generates all of your @font-face rules.
 
 [cssnext()](https://github.com/postcss/postcss) PostCSS-cssnext is a PostCSS plugin that helps you to use the latest CSS syntax today. It transforms CSS specs into more compatible CSS so you don’t need to wait for browser support. Really powerfull plugin with long list of [features](http://cssnext.io/features/).
 
