@@ -75,9 +75,10 @@ __Usage:__ `gulp scripts`
 Fork it if you can see a way to improve it or suggest improvenments, PR's are welcome.
 
 ## Changelog
-
-* v 1.04 added Font Magician PostCss plugin to bundle.
-* v 1.0 commited initial setup to Github. 
+* 0.1.4 Changed deprecated es-2015 babel preset to babel-preset-env., and added HTML minifier to build.
+* 0.1.3 Removed gulp-uglify( problems with minifying ES6 code, and moved to babel-minify.
+* 0.1.2 added Font Magician PostCss plugin to bundle.
+* 0.1.1 commited initial setup to Github. 
 
 ## Author
 
