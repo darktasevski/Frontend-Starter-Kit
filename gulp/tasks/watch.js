@@ -6,11 +6,13 @@ gutil			= require('gulp-util');
 gulp.task('watch', function(){
 
 	browserSync.init({
-
+    // Customize the Browsersync console logging prefix
+    	logPrefix: 'FSK',
 		server: {
 			baseDir: 'app',
 			index: "index.html"
-		}
+		},
+		port: 3000
 	});
 
 	watch('./app/index.html', function(){

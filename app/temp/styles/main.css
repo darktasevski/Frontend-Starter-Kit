@@ -160,10 +160,15 @@ we can specify global variable to use flexbox as default instead of floats
 	width: 100%; /* must be declared on parent*/
 }
 
-.grid-one:before { /* must be declared on parent*/ content: ''; display: table;
+.grid-one:before { /* must be declared on parent*/
+	content: '';
+	display: table;
 }
 
-.grid-one:after { /* must be declared on parent*/ content: ''; display: table; clear: both;
+.grid-one:after { /* must be declared on parent*/
+	content: '';
+	display: table;
+	clear: both;
 }
 
 .grid-one div {
@@ -171,22 +176,22 @@ we can specify global variable to use flexbox as default instead of floats
 }
 
 .grid-one div:nth-child(1n) {
- float: left;
- margin-right: 30px;
- clear: none
+	float: left;
+	margin-right: 30px;
+	clear: none
 }
 
 .grid-one div:last-child {
- margin-right: 0
+	margin-right: 0
 }
 
 .grid-one div:nth-child(1n) {
- margin-right: 0;
- float: right
+	margin-right: 0;
+	float: right
 }
 
 .grid-one div:nth-child(1n + 1) {
- clear: both
+	clear: both
 }
 
 @media (min-width: 576px) {
@@ -196,22 +201,22 @@ we can specify global variable to use flexbox as default instead of floats
  }
 
  .grid-one div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
+		float: left;
+		margin-right: 30px;
+		clear: none;
  }
 
  .grid-one div:last-child {
-  margin-right: 0;
+		margin-right: 0;
  }
 
  .grid-one div:nth-child(2n) {
-  margin-right: 0;
-  float: right;
+		margin-right: 0;
+		float: right;
  }
 
  .grid-one div:nth-child(2n + 1) {
-  clear: both;
+		clear: both;
  }
 	}
 
@@ -222,22 +227,22 @@ we can specify global variable to use flexbox as default instead of floats
  }
 
  .grid-one div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
+		float: left;
+		margin-right: 30px;
+		clear: none;
  }
 
  .grid-one div:last-child {
-  margin-right: 0;
+		margin-right: 0;
  }
 
  .grid-one div:nth-child(3n) {
-  margin-right: 0;
-  float: right;
+		margin-right: 0;
+		float: right;
  }
 
  .grid-one div:nth-child(3n + 1) {
-  clear: both;
+		clear: both;
  }
 	}
 
@@ -248,22 +253,22 @@ we can specify global variable to use flexbox as default instead of floats
  }
 
  .grid-one div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
+		float: left;
+		margin-right: 30px;
+		clear: none;
  }
 
  .grid-one div:last-child {
-  margin-right: 0;
+		margin-right: 0;
  }
 
  .grid-one div:nth-child(6n) {
-  margin-right: 0;
-  float: right;
+		margin-right: 0;
+		float: right;
  }
 
  .grid-one div:nth-child(6n + 1) {
-  clear: both;
+		clear: both;
  }
 	}
 
@@ -296,28 +301,28 @@ we can specify global variable to use flexbox as default instead of floats
 
 .grid-two:before {
 	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
-	content: '';
-	display: table;
+	content:'';
+	display:table;
 }
 
 .grid-two:after {
 	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
-	content: '';
-	display: table;
-	clear: both;
+	content:'';
+	display:table;
+	clear:both;
 }
 
 .grid-two:before {
 	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
-	content: '';
-	display: table;
+	content:'';
+	display:table;
 }
 
 .grid-two:after {
 	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
-	content: '';
-	display: table;
-	clear: both;
+	content:'';
+	display:table;
+	clear:both;
 }
 
 .grid-two div {
@@ -365,25 +370,25 @@ we can specify global variable to use flexbox as default instead of floats
 }
 
 .grid-three:before {
- content: '';
- display: table;
+	content: '';
+	display: table;
 }
 
 .grid-three:after {
- content: '';
- display: table;
- clear: both;
+	content: '';
+	display: table;
+	clear: both;
 }
 
 .grid-three:before {
- content: '';
- display: table;
+	content: '';
+	display: table;
 }
 
 .grid-three:after {
- content: '';
- display: table;
- clear: both;
+	content: '';
+	display: table;
+	clear: both;
 }
 
 .grid-three div {
@@ -393,22 +398,22 @@ we can specify global variable to use flexbox as default instead of floats
 }
 
 .grid-three div:nth-child(1n) {
- float: left;
- margin-right: 30px;
- clear: none
+	float: left;
+	margin-right: 30px;
+	clear: none
 }
 
 .grid-three div:last-child {
- margin-right: 0
+	margin-right: 0
 }
 
 .grid-three div:nth-child(1n) {
- margin-right: 0;
- float: right
+	margin-right: 0;
+	float: right
 }
 
 .grid-three div:nth-child(1n + 1) {
- clear: both
+	clear: both
 }
 
 @media (min-width: 576px) {
@@ -418,22 +423,22 @@ we can specify global variable to use flexbox as default instead of floats
  }
 
  .grid-three div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
+		float: left;
+		margin-right: 30px;
+		clear: none;
  }
 
  .grid-three div:last-child {
-  margin-right: 0;
+		margin-right: 0;
  }
 
  .grid-three div:nth-child(2n) {
-  margin-right: 0;
-  float: right;
+		margin-right: 0;
+		float: right;
  }
 
  .grid-three div:nth-child(2n + 1) {
-  clear: both;
+		clear: both;
  }
 	}
 
@@ -444,22 +449,22 @@ we can specify global variable to use flexbox as default instead of floats
  }
 
  .grid-three div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
+		float: left;
+		margin-right: 30px;
+		clear: none;
  }
 
  .grid-three div:last-child {
-  margin-right: 0;
+		margin-right: 0;
  }
 
  .grid-three div:nth-child(3n) {
-  margin-right: 0;
-  float: right;
+		margin-right: 0;
+		float: right;
  }
 
  .grid-three div:nth-child(3n + 1) {
-  clear: both;
+		clear: both;
  }
 	}
 
@@ -471,27 +476,27 @@ we can specify global variable to use flexbox as default instead of floats
  }
 
  .grid-three div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  clear: none;
+		float: left;
+		margin-right: 30px;
+		margin-bottom: 30px;
+		clear: none;
  }
 
  .grid-three div:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
+		margin-right: 0;
+		margin-bottom: 0;
  }
 
  .grid-three div:nth-child(4n) {
-  margin-right: 0;
+		margin-right: 0;
  }
 
  .grid-three div:nth-child(4n + 1) {
-  clear: both;
+		clear: both;
  }
 
  .grid-three div:nth-last-child(-n + 4) {
-  margin-bottom: 0;
+		margin-bottom: 0;
  }
 	}
 
@@ -523,22 +528,22 @@ we can specify global variable to use flexbox as default instead of floats
 }
 
 .grid-four div:nth-child(1n) {
- float: left;
- margin-right: 30px;
- clear: none
+	float: left;
+	margin-right: 30px;
+	clear: none
 }
 
 .grid-four div:last-child {
- margin-right: 0
+	margin-right: 0
 }
 
 .grid-four div:nth-child(1n) {
- margin-right: 0;
- float: right
+	margin-right: 0;
+	float: right
 }
 
 .grid-four div:nth-child(1n + 1) {
- clear: both
+	clear: both
 }
 
 @media (min-width: 576px) {
@@ -548,22 +553,22 @@ we can specify global variable to use flexbox as default instead of floats
  }
 
  .grid-four div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
+		float: left;
+		margin-right: 30px;
+		clear: none;
  }
 
  .grid-four div:last-child {
-  margin-right: 0;
+		margin-right: 0;
  }
 
  .grid-four div:nth-child(2n) {
-  margin-right: 0;
-  float: right;
+		margin-right: 0;
+		float: right;
  }
 
  .grid-four div:nth-child(2n + 1) {
-  clear: both;
+		clear: both;
  }
 	}
 
@@ -574,22 +579,22 @@ we can specify global variable to use flexbox as default instead of floats
  }
 
  .grid-four div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
+		float: left;
+		margin-right: 30px;
+		clear: none;
  }
 
  .grid-four div:last-child {
-  margin-right: 0;
+		margin-right: 0;
  }
 
  .grid-four div:nth-child(3n) {
-  margin-right: 0;
-  float: right;
+		margin-right: 0;
+		float: right;
  }
 
  .grid-four div:nth-child(3n + 1) {
-  clear: both;
+		clear: both;
  }
 	}
 
@@ -599,21 +604,22 @@ we can specify global variable to use flexbox as default instead of floats
 		flex-grow: 0;
 		flex-shrink: 0;
 		flex-basis: calc(99.9% * 1/4 - (30px - 30px * 1/4));
+		max-width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
 		width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
  }
 
  .grid-four div:nth-child(1n) {
-  margin-right: 30px;
-  margin-left: 0;
+		margin-right: 30px;
+		margin-left: 0;
  }
 
  .grid-four div:last-child {
-  margin-right: 0;
+		margin-right: 0;
  }
 
  .grid-four div:nth-child(4n) {
-  margin-right: 0;
-  margin-left: auto;
+		margin-right: 0;
+		margin-left: auto;
  }
 	}
 

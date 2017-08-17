@@ -6,8 +6,17 @@ var gulp 		 	= require('gulp'),
 	rucksack		= require('rucksack-css'),
 	fontMagician	= require('postcss-font-magician'),
 	postcssurl	   	= require('postcss-url'),
+	plumber			= require('gulp-plumber'),
 	reporter	 	= require("postcss-reporter"),
-	sourcemaps	 	= require('gulp-sourcemaps');
+	sourcemaps	 	= require('gulp-sourcemaps'),
+	errorCheck 		= function (err) {
+		notify.onError({
+			title: "Gulp error in " + err.plugin,
+			message:  err.toString()
+		})(err);
+		gutil.beep();
+		gutil.log(err);
+	  };
 
 var paths = {
 	cssSource: './app/assets/styles/main.css',
@@ -18,6 +27,9 @@ var paths = {
 gulp.task('styles', function(){
 
 	return gulp.src(paths.cssSource)
+		.pipe(plumber(function () {
+			errorHandler: errorCheck
+		}))
 		.pipe( sourcemaps.init())
 		.pipe(postcss([
 			require('postcss-partial-import')({prefix: '_', extension: '.css'}),
