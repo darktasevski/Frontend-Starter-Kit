@@ -75,6 +75,7 @@ __Usage:__ `gulp scripts`
 Fork it if you can see a way to improve it or suggest improvenments, PR's are welcome.
 
 ## Changelog
+* 0.1.5 Added gulp-load-plugins to build, and improved perfomance and startup time of tasks
 * 0.1.4 Changed deprecated es-2015 babel preset to babel-preset-env., and added HTML minifier to build.
 * 0.1.3 Removed gulp-uglify( problems with minifying ES6 code, and moved to babel-minify.
 * 0.1.2 added Font Magician PostCss plugin to bundle.
