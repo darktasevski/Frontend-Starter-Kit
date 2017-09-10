@@ -1,22 +1,31 @@
-var gulp 		 	= require('gulp'),	
+
+var gulp 		 	= require('gulp'),
 	lost			= require('lost'),
- 	gutil 		 	= require('gulp-util'),
-	postcss 	 	= require('gulp-postcss'),
+ 	// gutil 		 	= require('gulp-util'),
+	// postcss 	 	= require('gulp-postcss'),
 	cssnext		 	= require('postcss-cssnext'),
-	rucksack		= require('rucksack-css'),
+	rucksackCss		= require('rucksack-css'),
 	fontMagician	= require('postcss-font-magician'),
-	postcssurl	   	= require('postcss-url'),
-	plumber			= require('gulp-plumber'),
+	postcssUrl	   	= require('postcss-url'),
+	// plumber			= require('gulp-plumber'),
 	reporter	 	= require("postcss-reporter"),
-	sourcemaps	 	= require('gulp-sourcemaps'),
+	// sourcemaps	 	= require('gulp-sourcemaps'),
 	errorCheck 		= function (err) {
-		notify.onError({
+		plugins.notify.onError({
 			title: "Gulp error in " + err.plugin,
 			message:  err.toString()
 		})(err);
-		gutil.beep();
-		gutil.log(err);
+		plugins.util.beep();
+		plugins.util.log(err);
 	  };
+	
+	var plugins = require("gulp-load-plugins")({
+		pattern: ['gulp-*', 'gulp.*'],
+		replaceString: /\bgulp[\-.]/, 
+		lazy: true,
+		camelize: true,
+		scope: ['dependencies', 'devDependencies']
+	  });
 
 var paths = {
 	cssSource: './app/assets/styles/main.css',
@@ -27,24 +36,24 @@ var paths = {
 gulp.task('styles', function(){
 
 	return gulp.src(paths.cssSource)
-		.pipe(plumber(function () {
+		.pipe(plugins.plumber(function () {
 			errorHandler: errorCheck
 		}))
-		.pipe( sourcemaps.init())
-		.pipe(postcss([
+		.pipe(plugins.sourcemaps.init())
+		.pipe(plugins.postcss([
 			require('postcss-partial-import')({prefix: '_', extension: '.css'}),
-				postcssurl(),
+				postcssUrl(),
 					require('postcss-normalize')({browsers: 'last 2 versions'}),	
 						fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 		
 							cssnext(),	// http://cssnext.io/features/
-								rucksack(), // http://simplaio.github.io/rucksack/docs/#
+								rucksackCss(), // http://simplaio.github.io/rucksack/docs/#
 									require('postcss-nesting'),
 										lost(), // lost must be after nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
 											reporter()
 			]))
-		.on('error', gutil.log, function(err){
+		.on('error', plugins.util.log, function(err){
 			this.emit('end');
 		})
-  		.pipe(sourcemaps.write('./'))
+  		.pipe(plugins.sourcemaps.write('./'))
   		.pipe(gulp.dest(paths.cssDest));
 });		
