@@ -41,6 +41,6 @@
     "postcss-reporter": "^4.0.0",
     "postcss-url": "^7.1.2",
     "rucksack-css": "^0.9.1",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.6"
   }
 }
