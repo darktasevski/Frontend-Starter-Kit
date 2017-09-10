@@ -1,12 +1,14 @@
 var gulp 		= require('gulp'),
 	browserSync = require('browser-sync').create(),
-	imagemin 	= require('gulp-imagemin'),
-	cssNano 	= require('gulp-cssnano'),
-	usemin 		= require('gulp-usemin'),
-	minify 		= require("gulp-babel-minify"),
-	htmlmin 	= require('gulp-htmlmin'),
-	del 		= require('del'),
-	rev 		= require('gulp-rev');
+	del 		= require('del');
+
+var $ = require("gulp-load-plugins")({
+		pattern: ['gulp-*', 'gulp.*'],
+		replaceString: /\bgulp[\-.]/, 
+		lazy: true,
+		camelize: true,
+		scope: ['dependencies', 'devDependencies']
+});
 
 gulp.task('previewDist', function () {
 
@@ -28,7 +30,7 @@ gulp.task('deleteDist', function () { // delete dist folder everytime before sta
 
 gulp.task('optimizeImages', ['deleteDist'], function () {
 	return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
-		.pipe(imagemin({ // compressing images 
+		.pipe($.imagemin({ // compressing images 
 			progressive: true, // this will optimize jpg images
 			interlaced: true, // this will help optimizing gif images
 			multipass: true // this will help with svg files
@@ -59,7 +61,7 @@ gulp.task('useminTrigger', ['deleteDist'], function () {
 
 gulp.task('usemin', ['styles', 'scripts'], function () {
 	return gulp.src('./app/index.html')
-		.pipe(htmlmin({
+		.pipe($.htmlmin({
 			collapseWhitespace: true,
 			collapseBooleanAttributes: true,
 			removeAttributeQuotes: true,
@@ -69,16 +71,16 @@ gulp.task('usemin', ['styles', 'scripts'], function () {
 			removeStyleLinkTypeAttributes: true,
 			removeOptionalTags: true
 		}))
-		.pipe(usemin({
+		.pipe($.usemin({
 			css: [function () {
-				return rev()
+				return $.rev()
 			}, function () {
-				return cssNano()
+				return $.cssnano()
 			}],
 			js: [function () {
-				return rev()
+				return $.rev()
 			}, function () {
-				return minify(({
+				return $.babelMinify(({
 					mangle: {
 						keepClassName: true
 					}

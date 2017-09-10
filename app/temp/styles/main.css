@@ -42,7 +42,8 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*
@@ -172,105 +173,105 @@ we can specify global variable to use flexbox as default instead of floats
 }
 
 .grid-one div {
-	width: calc(99.9% * 1/1 - (30px - 30px * 1/1))
+	width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
 }
 
 .grid-one div:nth-child(1n) {
 	float: left;
 	margin-right: 30px;
-	clear: none
+	clear: none;
 }
 
 .grid-one div:last-child {
-	margin-right: 0
+	margin-right: 0;
 }
 
 .grid-one div:nth-child(1n) {
 	margin-right: 0;
-	float: right
+	float: right;
 }
 
 .grid-one div:nth-child(1n + 1) {
-	clear: both
+	clear: both;
 }
 
 @media (min-width: 576px) {
 
  .grid-one div {
-		width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+  width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
  }
 
  .grid-one div:nth-child(1n) {
-		float: left;
-		margin-right: 30px;
-		clear: none;
+  float: left;
+  margin-right: 30px;
+  clear: none;
  }
 
  .grid-one div:last-child {
-		margin-right: 0;
+  margin-right: 0;
  }
 
  .grid-one div:nth-child(2n) {
-		margin-right: 0;
-		float: right;
+  margin-right: 0;
+  float: right;
  }
 
  .grid-one div:nth-child(2n + 1) {
-		clear: both;
+  clear: both;
  }
-	}
+}
 
 @media (min-width: 768px) {
 
  .grid-one div {
-		width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
+  width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
  }
 
  .grid-one div:nth-child(1n) {
-		float: left;
-		margin-right: 30px;
-		clear: none;
+  float: left;
+  margin-right: 30px;
+  clear: none;
  }
 
  .grid-one div:last-child {
-		margin-right: 0;
+  margin-right: 0;
  }
 
  .grid-one div:nth-child(3n) {
-		margin-right: 0;
-		float: right;
+  margin-right: 0;
+  float: right;
  }
 
  .grid-one div:nth-child(3n + 1) {
-		clear: both;
+  clear: both;
  }
-	}
+}
 
 @media (min-width: 992px) {
 
  .grid-one div {
-		width: calc(99.9% * 1/6 - (30px - 30px * 1/6));
+  width: calc(99.9% * 1/6 - (30px - 30px * 1/6));
  }
 
  .grid-one div:nth-child(1n) {
-		float: left;
-		margin-right: 30px;
-		clear: none;
+  float: left;
+  margin-right: 30px;
+  clear: none;
  }
 
  .grid-one div:last-child {
-		margin-right: 0;
+  margin-right: 0;
  }
 
  .grid-one div:nth-child(6n) {
-		margin-right: 0;
-		float: right;
+  margin-right: 0;
+  float: right;
  }
 
  .grid-one div:nth-child(6n + 1) {
-		clear: both;
+  clear: both;
  }
-	}
+}
 
 .nested-grid {
 	background: red;
@@ -394,111 +395,111 @@ we can specify global variable to use flexbox as default instead of floats
 .grid-three div {
 	width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
 	font-size: 2em;
-	background: rgb(166, 107, 0)
+	background: rgb(166, 107, 0);
 }
 
 .grid-three div:nth-child(1n) {
 	float: left;
 	margin-right: 30px;
-	clear: none
+	clear: none;
 }
 
 .grid-three div:last-child {
-	margin-right: 0
+	margin-right: 0;
 }
 
 .grid-three div:nth-child(1n) {
 	margin-right: 0;
-	float: right
+	float: right;
 }
 
 .grid-three div:nth-child(1n + 1) {
-	clear: both
+	clear: both;
 }
 
 @media (min-width: 576px) {
 
  .grid-three div {
-		width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+  width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
  }
 
  .grid-three div:nth-child(1n) {
-		float: left;
-		margin-right: 30px;
-		clear: none;
+  float: left;
+  margin-right: 30px;
+  clear: none;
  }
 
  .grid-three div:last-child {
-		margin-right: 0;
+  margin-right: 0;
  }
 
  .grid-three div:nth-child(2n) {
-		margin-right: 0;
-		float: right;
+  margin-right: 0;
+  float: right;
  }
 
  .grid-three div:nth-child(2n + 1) {
-		clear: both;
+  clear: both;
  }
-	}
+}
 
 @media (min-width: 768px) {
 
  .grid-three div {
-		width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
+  width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
  }
 
  .grid-three div:nth-child(1n) {
-		float: left;
-		margin-right: 30px;
-		clear: none;
+  float: left;
+  margin-right: 30px;
+  clear: none;
  }
 
  .grid-three div:last-child {
-		margin-right: 0;
+  margin-right: 0;
  }
 
  .grid-three div:nth-child(3n) {
-		margin-right: 0;
-		float: right;
+  margin-right: 0;
+  float: right;
  }
 
  .grid-three div:nth-child(3n + 1) {
-		clear: both;
+  clear: both;
  }
-	}
+}
 
 @media (min-width: 992px) {
 
  .grid-three div {
-		width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
-		height: calc(99.9% * 1/4 - (30px - 30px * 1/4));
+  width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
+  height: calc(99.9% * 1/4 - (30px - 30px * 1/4));
  }
 
  .grid-three div:nth-child(1n) {
-		float: left;
-		margin-right: 30px;
-		margin-bottom: 30px;
-		clear: none;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  clear: none;
  }
 
  .grid-three div:last-child {
-		margin-right: 0;
-		margin-bottom: 0;
+  margin-right: 0;
+  margin-bottom: 0;
  }
 
  .grid-three div:nth-child(4n) {
-		margin-right: 0;
+  margin-right: 0;
  }
 
  .grid-three div:nth-child(4n + 1) {
-		clear: both;
+  clear: both;
  }
 
  .grid-three div:nth-last-child(-n + 4) {
-		margin-bottom: 0;
+  margin-bottom: 0;
  }
-	}
+}
 
 /*  Flexbox Grid  */
 
@@ -524,104 +525,104 @@ we can specify global variable to use flexbox as default instead of floats
 .grid-four div {
 	width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
 	font-size: 2em;
-	background: rgb(0, 102, 102)
+	background: rgb(0, 102, 102);
 }
 
 .grid-four div:nth-child(1n) {
 	float: left;
 	margin-right: 30px;
-	clear: none
+	clear: none;
 }
 
 .grid-four div:last-child {
-	margin-right: 0
+	margin-right: 0;
 }
 
 .grid-four div:nth-child(1n) {
 	margin-right: 0;
-	float: right
+	float: right;
 }
 
 .grid-four div:nth-child(1n + 1) {
-	clear: both
+	clear: both;
 }
 
 @media (min-width: 576px) {
 
  .grid-four div {
-		width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
+  width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
  }
 
  .grid-four div:nth-child(1n) {
-		float: left;
-		margin-right: 30px;
-		clear: none;
+  float: left;
+  margin-right: 30px;
+  clear: none;
  }
 
  .grid-four div:last-child {
-		margin-right: 0;
+  margin-right: 0;
  }
 
  .grid-four div:nth-child(2n) {
-		margin-right: 0;
-		float: right;
+  margin-right: 0;
+  float: right;
  }
 
  .grid-four div:nth-child(2n + 1) {
-		clear: both;
+  clear: both;
  }
-	}
+}
 
 @media (min-width: 768px) {
 
  .grid-four div {
-		width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
+  width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
  }
 
  .grid-four div:nth-child(1n) {
-		float: left;
-		margin-right: 30px;
-		clear: none;
+  float: left;
+  margin-right: 30px;
+  clear: none;
  }
 
  .grid-four div:last-child {
-		margin-right: 0;
+  margin-right: 0;
  }
 
  .grid-four div:nth-child(3n) {
-		margin-right: 0;
-		float: right;
+  margin-right: 0;
+  float: right;
  }
 
  .grid-four div:nth-child(3n + 1) {
-		clear: both;
+  clear: both;
  }
-	}
+}
 
 @media (min-width: 992px) {
 
  .grid-four div {
-		flex-grow: 0;
-		flex-shrink: 0;
-		flex-basis: calc(99.9% * 1/4 - (30px - 30px * 1/4));
-		max-width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
-		width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(99.9% * 1/4 - (30px - 30px * 1/4));
+  max-width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
+  width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
  }
 
  .grid-four div:nth-child(1n) {
-		margin-right: 30px;
-		margin-left: 0;
+  margin-right: 30px;
+  margin-left: 0;
  }
 
  .grid-four div:last-child {
-		margin-right: 0;
+  margin-right: 0;
  }
 
  .grid-four div:nth-child(4n) {
-		margin-right: 0;
-		margin-left: auto;
+  margin-right: 0;
+  margin-left: auto;
  }
-	}
+}
 
 /* html setup */
 
@@ -799,7 +800,8 @@ we can specify global variable to use flexbox as default instead of floats
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+                box-shadow: none !important;
         text-shadow: none !important;
     }
 
