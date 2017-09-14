@@ -1,5 +1,5 @@
 {
-  "name": "gulp_boilerplate",
+  "name": "front_end_starter",
   "version": "0.1.4",
   "description": "",
   "main": "index.js",
@@ -38,6 +38,7 @@
     "gulp-watch": "^4.3.11",
     "lost": "^8.2.0",
     "path": "^0.12.7",
+    "postcss-assets": "^5.0.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-font-magician": "^2.0.0",
     "postcss-nesting": "^4.1.0",

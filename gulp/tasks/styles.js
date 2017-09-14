@@ -1,10 +1,8 @@
 var gulp 		 	= require('gulp'),	
 	lost			= require('lost'),
-	cssnext		 	= require('postcss-cssnext'),
 	rucksackCss		= require('rucksack-css'),
-	fontMagician	= require('postcss-font-magician'),
-	postcssUrl	   	= require('postcss-url'),
-	reporter	 	= require("postcss-reporter");
+	fontMagician	= require('postcss-font-magician');
+
 	
 var errorCheck 		= function (err) {
 	$.notify.onError({
@@ -38,14 +36,17 @@ gulp.task('styles', function(){
 		.pipe($.sourcemaps.init())
 		.pipe($.postcss([
 			require('postcss-partial-import')({prefix: '_', extension: '.css'}),
-				postcssUrl(),
-					require('postcss-normalize')({browsers: 'last 2 versions'}),	
-						fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 		
-							cssnext(),	// http://cssnext.io/features/
-								rucksackCss(), // http://simplaio.github.io/rucksack/docs/#
-									require('postcss-nesting'),
-										lost(), // lost must be after nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
-											reporter()
+				require('postcss-assets')({
+						basePath: 'app'
+					}),
+						require("postcss-url")(),
+							require('postcss-normalize')({browsers: 'last 2 versions'}),	
+								fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 		
+									require("postcss-cssnext")(),	// http://cssnext.io/features/
+										rucksackCss(), // http://simplaio.github.io/rucksack/docs/#
+											require('postcss-nesting'),
+												lost(), // lost must be after nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
+													require("postcss-reporter")()
 			]))
 		.on('error', $.util.log, function(err){
 			this.emit('end');
