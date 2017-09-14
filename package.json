@@ -45,7 +45,6 @@
     "postcss-normalize": "^4.0.0",
     "postcss-partial-import": "^4.1.0",
     "postcss-reporter": "^5.0.0",
-    "postcss-url": "^7.1.2",
     "rucksack-css": "^1.0.2",
     "webpack": "^3.5.6"
   }

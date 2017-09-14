@@ -105,7 +105,7 @@ textarea {
    .responsive {
        font-size: responsive 16px 36px;
    }
-
+/* Just a test for postcss-assets resolve*/
 body {
     background: resolve('fog.jpg')
 }

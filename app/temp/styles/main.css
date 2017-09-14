@@ -143,6 +143,8 @@ textarea {
  }
 }
 
+/* Just a test for postcss-assets resolve*/
+
 body {
     background: url('/assets/images/fog.jpg')
 }
