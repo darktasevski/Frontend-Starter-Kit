@@ -1,7 +1,12 @@
-const gulp 		= require('gulp'),
-watch 		 	= require('gulp-watch'),
-browserSync 	= require('browser-sync').create(),
-gutil			= require('gulp-util');
+const gulp 			= require('gulp'),
+	  browserSync 	= require('browser-sync').create();
+
+var $ = require("gulp-load-plugins")({
+	pattern: ['gulp-*', 'gulp.*'],
+	replaceString: /\bgulp[\-.]/, 
+	lazy: true,
+	scope: ['dependencies', 'devDependencies']
+});
 
 gulp.task('watch', function(){
 
@@ -15,15 +20,15 @@ gulp.task('watch', function(){
 		port: 3000
 	});
 
-	watch('./app/index.html', function(){
+	$.watch('./app/index.html', function(){
 		browserSync.reload();
 	});
 
-	watch('./app/assets/styles/**/*.css', function(){
+	$.watch('./app/assets/styles/**/*.css', function(){
 		gulp.start('cssInject');
 	});
 
-	watch('./app/assets/scripts/**/*.js', function(){
+	$.watch('./app/assets/scripts/**/*.js', function(){
 		gulp.start('scriptsRefresh');
 	});
 });
