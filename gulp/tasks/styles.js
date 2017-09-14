@@ -35,15 +35,14 @@ gulp.task('styles', function(){
 		.pipe($.sourcemaps.init())
 		.pipe($.postcss([
 			require('postcss-partial-import')({prefix: '_', extension: '.css'}),
-				require('postcss-assets')({ basePath: 'app' }), // assets url handling
-					require("postcss-url")(),
-						require('postcss-normalize')({browsers: 'last 2 versions'}),	
-							fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 		
-								require("postcss-cssnext")(),	// http://cssnext.io/features/
-									rucksackCss(), // http://simplaio.github.io/rucksack/docs/#
-										require('postcss-nesting'),
-											lost(), // lost must be after nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
-												require("postcss-reporter")()
+				require('postcss-assets')({ basePath: `app`, loadPaths: ['assets/images']}), // assets url handling
+					require('postcss-normalize')({browsers: 'last 2 versions'}),	
+						fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 		
+							require("postcss-cssnext")(),	// http://cssnext.io/features/
+								rucksackCss(), // http://simplaio.github.io/rucksack/docs/#
+									require('postcss-nesting'),
+										lost(), // lost must be after nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
+											require("postcss-reporter")()
 			]))
 		.on('error', $.util.log, function(err){
 			this.emit('end');

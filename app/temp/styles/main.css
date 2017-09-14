@@ -143,6 +143,10 @@ textarea {
  }
 }
 
+body {
+    background: url('/assets/images/fog.jpg')
+}
+
 /*
 we can specify global variable to use flexbox as default instead of floats
 

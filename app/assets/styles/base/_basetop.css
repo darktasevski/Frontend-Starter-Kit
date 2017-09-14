@@ -105,3 +105,7 @@ textarea {
    .responsive {
        font-size: responsive 16px 36px;
    }
+
+body {
+    background: resolve('fog.jpg')
+}
