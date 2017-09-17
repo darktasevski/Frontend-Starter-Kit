@@ -11,11 +11,10 @@ var $ = require("gulp-load-plugins")({
 });
 
 gulp.task('previewDist', function () {
-
 	browserSync.init({
 		logPrefix: 'FSK',
 		server: {
-			baseDir: 'docs',
+			baseDir: 'dist',
 			index: "index.html"
 		},
 		port: 3001
@@ -24,19 +23,21 @@ gulp.task('previewDist', function () {
 });
 
 gulp.task('deleteDist', function () { // delete dist folder everytime before starting distributing files in it.
-	return del('./docs')
+	return del('./dist')
 });
-
 
 gulp.task('optimizeImages', ['deleteDist'], function () {
 	return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
 		.pipe($.imagemin({ // compressing images 
+			optimizationLevel: 6,
 			progressive: true, // this will optimize jpg images
 			interlaced: true, // this will help optimizing gif images
-			multipass: true // this will help with svg files
+			multipass: true, // this will help with svg files
+			verbose: true,
+            use: []
 
 		}))
-		.pipe(gulp.dest('./docs/assets/images'));
+		.pipe(gulp.dest('./dist/assets/images'));
 });
 
 gulp.task('copyGeneralFiles', ['deleteDist'], function () {
@@ -52,7 +53,7 @@ gulp.task('copyGeneralFiles', ['deleteDist'], function () {
 		'!./app/doc/**'
 	]
 	return gulp.src(pathsToCopy)
-		.pipe(gulp.dest('./docs'));
+		.pipe(gulp.dest('./dist'));
 });
 
 gulp.task('useminTrigger', ['deleteDist'], function () {
@@ -75,7 +76,15 @@ gulp.task('usemin', ['styles', 'scripts'], function () {
 			css: [function () {
 				return $.rev()
 			}, function () {
-				return $.cssnano()
+				return $.cssnano({
+					discardComments: {
+						removeAll: true
+					},
+					discardDuplicates: true,
+					discardEmpty: true,
+					minifyFontValues: true,
+					minifySelectors: true
+				})
 			}],
 			js: [function () {
 				return $.rev()
@@ -87,7 +96,11 @@ gulp.task('usemin', ['styles', 'scripts'], function () {
 				}))
 			}]
 		}))
-		.pipe(gulp.dest('./docs'));
+		.pipe($.size({
+            gzip: true,
+            showFiles: true
+        }))
+		.pipe(gulp.dest('./dist'));
 });
 
 

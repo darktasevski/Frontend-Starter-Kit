@@ -9,6 +9,10 @@ var $ = require("gulp-load-plugins")({
 });
 
 gulp.task('watch', function(){
+	
+	$.util.log('---------------------------------------');
+	$.util.log('Night gathers, and now my watch begins.');
+	$.util.log('---------------------------------------');
 
 	browserSync.init({
     // Customize the Browsersync console logging prefix
