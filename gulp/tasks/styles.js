@@ -1,7 +1,8 @@
 var gulp 		 	= require('gulp'),	
 	lost			= require('lost'),
 	rucksackCss		= require('rucksack-css'),
-	fontMagician	= require('postcss-font-magician');
+	fontMagician	= require('postcss-font-magician'),
+	onError 		= require( '../utilities/errorHandler');
 
 var $ = require("gulp-load-plugins")({
 	pattern: ['gulp-*', 'gulp.*'],
@@ -11,15 +12,7 @@ var $ = require("gulp-load-plugins")({
 	scope: ['dependencies', 'devDependencies']
 });
 
-var errorCheck 		= function (err) {
-	$.notify.onError({
-		title: "Gulp error in " + err.plugin,
-		message:  err.toString()
-	})(err);
-	$.util.beep();
-	$.util.log(err);
-};
-//  Path Configuration	  
+//  Path variables	  
 var paths = {
 	cssSource: './app/assets/styles/main.css',
 	cssDest: './app/temp/styles'
@@ -29,8 +22,8 @@ var paths = {
 gulp.task('styles', function(){
 
 	return gulp.src(paths.cssSource)
-		.pipe($.plumber(function () {
-			errorHandler: errorCheck
+		.pipe($.plumber({
+			errorHandler: onError
 		}))
 		.pipe($.sourcemaps.init())
 		.pipe($.postcss([
@@ -42,11 +35,9 @@ gulp.task('styles', function(){
 								rucksackCss(), // http://simplaio.github.io/rucksack/docs/#
 									require('postcss-nesting'),
 										lost(), // lost must be after nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
+										require("css-mqpacker")({sort: true}),
 											require("postcss-reporter")()
 			]))
-		.on('error', $.util.log, function(err){
-			this.emit('end');
-		})
   		.pipe($.sourcemaps.write('./'))
   		.pipe(gulp.dest(paths.cssDest));
 });		

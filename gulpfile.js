@@ -1,12 +1,5 @@
-'use strict';
-require('./gulp/tasks/styles');
-require('./gulp/tasks/watch');
-require('./gulp/tasks/scripts');
-require('./gulp/tasks/modernizr');
-require('./gulp/tasks/build');
-
 // $ npm install -g npm-check-updates
-// $ npm-check-updates -u
+// $ npm-check-updates -u // alias: ncu
 // $ rm -fr node_modules
 // $ npm install
 // Basically this installs npm-check-updates globally, runs it against your package.json and updates the dependency versions.
@@ -14,6 +7,14 @@ require('./gulp/tasks/build');
 // from: https://stackoverflow.com/questions/27024431/updating-gulp-plugins
 // As a general rule, and as a last resort, we better clean the npm cache with
 // $ npm cache clean
+'use strict';
+
+var requireDir = require('require-dir');
+
+// Require all tasks in gulp/tasks, including subfolders
+requireDir('./gulp/tasks', { recurse: true });
+
+
 
 
 

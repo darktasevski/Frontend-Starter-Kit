@@ -26,3 +26,5 @@ module.exports = {
 		}]
 	}
 }
+
+// todo mocha testing after bundling
