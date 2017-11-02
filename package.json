@@ -15,7 +15,7 @@
   "browserslist": "last 2 versions",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
     "gulp-rev": "^8.0.0",
@@ -24,7 +24,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
     "compression": "^1.7.1",
     "css-mqpacker": "^6.0.1",
@@ -51,13 +51,13 @@
     "path": "^0.12.7",
     "postcss-assets": "^5.0.0",
     "postcss-cssnext": "^3.0.2",
-    "postcss-font-magician": "^2.0.0",
-    "postcss-nesting": "^4.1.0",
+    "postcss-font-magician": "^2.1.0",
+    "postcss-nesting": "^4.2.1",
     "postcss-normalize": "^4.0.0",
     "postcss-partial-import": "^4.1.0",
     "postcss-reporter": "^5.0.0",
     "require-dir": "^0.3.2",
     "rucksack-css": "^1.0.2",
-    "webpack": "^3.6.0"
+    "webpack": "^3.8.1"
   }
 }
