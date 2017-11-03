@@ -11,7 +11,7 @@
     "server": "browser-sync start --directory --server --files '*.js, *.html, *.css'"
   },
   "author": "Puritanic",
-  "license": "ISC",
+  "license": "MIT",
   "browserslist": "last 2 versions",
   "dependencies": {
     "gulp": "^3.9.1",
