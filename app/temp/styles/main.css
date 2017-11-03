@@ -11,6 +11,92 @@
 
  /*custom properties*/
 /*Custom media*/
+
+  /* Material Design Adaptive Breakpoints */
+  /*
+    Below you'll find CSS media queries based on the breakpoint guidance
+    published by the Material Design team. You can choose to use, customise
+    or remove these breakpoints based on your needs.
+
+    http://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints
+   */
+
+  /* mobile-small */
+}
+
+:root {
+
+ /*mobile-large*/
+}
+
+:root {
+
+ /*mobile-small-landscape*/
+}
+
+:root {
+
+ /*mobile-large-landscape*/
+}
+
+:root {
+
+ /*tablet-small-landscape*/
+}
+
+:root {
+
+ /*tablet-large-landscape*/
+}
+
+:root {
+
+ /*tablet-small*/
+}
+
+:root {
+
+ /*tablet-large*/
+}
+
+:root {
+
+ /*desktop-x-small-landscape*/
+}
+
+:root {
+
+ /*desktop-x-small*/
+}
+
+:root {
+
+ /*desktop-small-landscape*/
+}
+
+:root {
+
+ /*desktop-small*/
+}
+
+:root {
+
+ /*desktop-medium-landscape*/
+}
+
+:root {
+
+ /*desktop-medium*/
+}
+
+:root {
+
+ /*desktop-large*/
+}
+
+:root {
+
+ /*desktop-xlarge*/
 }
 
 /* root */
@@ -528,6 +614,26 @@ we can specify global variable to use flexbox as default instead of floats
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
+@media all and (min-width: 361px) and (orientation: portrait) {
+
+ :root {}
+}
+
+@media all and (min-width: 481px) and (orientation: landscape) {
+
+ :root {}
+}
+
+@media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) {
+
+ :root {}
+}
+
+@media all and (min-width: 481px) and (max-width: 840px) and (orientation: landscape) {
+
+ :root {}
+}
+
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
@@ -604,6 +710,21 @@ we can specify global variable to use flexbox as default instead of floats
  }
 }
 
+@media all and (min-width: 600px) and (max-width: 960px) and (orientation: landscape) {
+
+ :root {}
+}
+
+@media all and (min-width: 600px) and (orientation: portrait) {
+
+ :root {}
+}
+
+@media all and (min-width: 601px) and (max-width: 840px) and (orientation : portrait) {
+
+ :root {}
+}
+
 @media (min-width: 768px) {
 
  .grid-one div {
@@ -674,6 +795,21 @@ we can specify global variable to use flexbox as default instead of floats
  .grid-four div:nth-child(3n + 1) {
   clear: both;
  }
+}
+
+@media all and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
+
+ :root {}
+}
+
+@media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) {
+
+ :root {}
+}
+
+@media all and (min-width: 961px) and (orientation: landscape) {
+
+ :root {}
 }
 
 @media (min-width: 992px) {
@@ -758,6 +894,33 @@ we can specify global variable to use flexbox as default instead of floats
  .responsive {
   font-size: 36px;
  }
+}
+
+@media all and (min-width: 1281px) and (max-width: 1600px) {
+
+ :root {}
+}
+
+@media all and (min-width: 1601px) and (max-width: 1920px) {
+
+ :root {}
+}
+
+@media all and (min-width: 0) and (max-width: 360px) and (orientation: portrait) {
+
+ :root {}
+}
+
+@media all and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4/3) {
+
+ :root {}
+}
+
+@media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) {
+
+ :root {}
+
+ :root {}
 }
 
 @media screen and (max-width: 420px) {

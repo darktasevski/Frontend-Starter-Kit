@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
-    compression = require("compression"),
     del = require('del');
 
 var $ = require("gulp-load-plugins")({
@@ -13,10 +12,9 @@ var $ = require("gulp-load-plugins")({
 
 gulp.task('previewDist', function () {
     browserSync.init({
-        logPrefix: 'FSK',
+        logPrefix: ' 💻 ',
         server: {
-            baseDir: 'dist',
-            middleware: compression()
+            baseDir: 'dist'
         },
         port: 3001
     })
@@ -70,8 +68,7 @@ gulp.task('usemin', ['styles', 'scripts'], function () {
             removeRedundantAttributes: true,
             removeEmptyAttributes: true,
             removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            removeOptionalTags: true
+            removeStyleLinkTypeAttributes: true
         }))
         .pipe($.usemin({
             css: [function () {
@@ -97,10 +94,6 @@ gulp.task('usemin', ['styles', 'scripts'], function () {
                 }))
             }]
         }))
-        // .pipe($.gzip({ // gziping contents for distribution
-        // 	append: false,
-        // 	skipGrowingFiles : true
-        // }))
         .pipe($.size({
             gzip: true,
             showFiles: true

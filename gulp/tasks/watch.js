@@ -16,7 +16,7 @@ gulp.task('watch', function(){
 
 	browserSync.init({
     // Customize the Browsersync console logging prefix
-    	logPrefix: '💻',
+    	logPrefix: ' 💻 ',
 		server: {
 			baseDir: 'app',
 			index: "index.html"

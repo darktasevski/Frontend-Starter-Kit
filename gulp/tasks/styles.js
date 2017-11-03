@@ -29,14 +29,14 @@ gulp.task('styles', function(){
 		.pipe($.postcss([
 			require('postcss-partial-import')({prefix: '_', extension: '.css'}),
 				require('postcss-assets')({ basePath: `app`, loadPaths: ['assets/images'], relative: 'assets/styles'}), // assets url handling
-					require('postcss-normalize')({browsers: 'last 2 versions'}),	
-						fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician	 		
+					require('postcss-normalize')({browsers: 'last 2 versions'}),
+						fontMagician({hosted: ['./app/assets/fonts', './assets/fonts/']}),	// https://github.com/jonathantneal/postcss-font-magician	 		
 							require("postcss-cssnext")(),	// http://cssnext.io/features/
 								rucksackCss(), // http://simplaio.github.io/rucksack/docs/#
 									require('postcss-nesting'),
 										lost(), // lost must be after nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
-										require("css-mqpacker")({sort: true}),
-											require("postcss-reporter")()
+											require("css-mqpacker")({sort: true}),
+												require("postcss-reporter")()
 			]))
   		.pipe($.sourcemaps.write('./'))
   		.pipe(gulp.dest(paths.cssDest));
