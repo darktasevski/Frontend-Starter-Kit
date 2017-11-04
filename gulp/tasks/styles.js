@@ -30,7 +30,7 @@ gulp.task('styles', function(){
 			require('postcss-partial-import')({prefix: '_', extension: '.css'}),
 				require('postcss-assets')({ basePath: `app`, loadPaths: ['assets/images'], relative: 'assets/styles'}), // assets url handling
 					require('postcss-normalize')({browsers: 'last 2 versions'}),
-						fontMagician({hosted: ['./app/assets/fonts', './assets/fonts/']}),	// https://github.com/jonathantneal/postcss-font-magician	 		
+						fontMagician({hosted: ['./app/assets/fonts', './assets/fonts/'], foundries: ['google']}),	// https://github.com/jonathantneal/postcss-font-magician	 		
 							require("postcss-cssnext")(),	// http://cssnext.io/features/
 								rucksackCss(), // http://simplaio.github.io/rucksack/docs/#
 									require('postcss-nesting'),
