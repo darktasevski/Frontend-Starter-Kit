@@ -1,6 +1,6 @@
 var gulp 		= require('gulp'),
 webpack	 		= require('webpack'),
-gulpNotify 		= require('gulp-notify'),
+gulpNotify 	= require('gulp-notify'),
 gutil 			= require('gulp-util'),
 notifier 		= require('node-notifier'),
 onError 		= require( '../utilities/errorHandler');

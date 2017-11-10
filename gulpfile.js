@@ -1,6 +1,6 @@
 // $ npm install -g npm-check-updates
 // $ npm-check-updates -u // alias: ncu
-// $ rm -fr node_modules
+// $ rm -rf node_modules
 // $ npm install
 // Basically this installs npm-check-updates globally, runs it against your package.json and updates the dependency versions.
 // Then you just delete the node modules folder and re-install.

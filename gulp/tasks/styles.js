@@ -39,5 +39,6 @@ gulp.task('styles', function(){
 												require("postcss-reporter")()
 			]))
   		.pipe($.sourcemaps.write('./'))
-  		.pipe(gulp.dest(paths.cssDest));
+		.pipe($.plumber.stop())
+		.pipe(gulp.dest(paths.cssDest));
 });		

@@ -18,7 +18,7 @@
     "gulp-imagemin": "^3.4.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
-    "gulp-rev": "^8.0.0",
+    "gulp-rev": "^8.1.0",
     "gulp-sourcemaps": "^2.6.1"
   },
   "devDependencies": {

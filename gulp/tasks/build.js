@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     del = require('del');
 
+    // Lazy load plugins
 var $ = require("gulp-load-plugins")({
     pattern: ['gulp-*', 'gulp.*'],
     replaceString: /\bgulp[\-.]/,
@@ -10,6 +11,7 @@ var $ = require("gulp-load-plugins")({
     scope: ['dependencies', 'devDependencies']
 });
 
+// Browsersync server for dist folder
 gulp.task('previewDist', function () {
     browserSync.init({
         logPrefix: ' 💻 ',
@@ -18,15 +20,28 @@ gulp.task('previewDist', function () {
         },
         port: 3001
     })
-
 });
 
-gulp.task('deleteDist', function () { // delete dist folder everytime before starting distributing files in it.
+// Fonts
+gulp.task('fonts', ['deleteDist'], function () {
+    return gulp.src('./app/assets/fonts/*.{eot,woff,woff2,svg,ttf,otf}')
+        .pipe($.plumber())
+        .pipe($.plumber.stop())
+        .pipe($.size({
+            gzip: true,
+            showFiles: true
+        }))
+        .pipe(gulp.dest('./dist/assets/fonts'));
+});
+
+// delete dist folder everytime before starting distributing files in it.
+gulp.task('deleteDist', function () {
     return del('./dist')
 });
 
 gulp.task('optimizeImages', ['deleteDist'], function () {
     return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
+        .pipe($.plumber())    
         .pipe($.imagemin({ // compressing images 
             optimizationLevel: 6,
             progressive: true, // this will optimize jpg images
@@ -36,6 +51,7 @@ gulp.task('optimizeImages', ['deleteDist'], function () {
             use: []
 
         }))
+        .pipe($.plumber.stop())        
         .pipe(gulp.dest('./dist/assets/images'));
 });
 
@@ -47,9 +63,7 @@ gulp.task('copyGeneralFiles', ['deleteDist'], function () {
         '!./app/assets/styles/**',
         '!./app/assets/scripts/**',
         '!./app/temp',
-        '!./app/temp/**',
-        '!./app/doc',
-        '!./app/doc/**'
+        '!./app/temp/**'
     ]
     return gulp.src(pathsToCopy)
         .pipe(gulp.dest('./dist'));
@@ -102,9 +116,7 @@ gulp.task('usemin', ['styles', 'scripts'], function () {
 });
 
 
-gulp.task('build', ['deleteDist', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger'], function () {
-
-});
+gulp.task('build', ['deleteDist', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger', 'fonts'], function () {});
 
 gulp.task('deleteDocs', function () {
     return del('./docs');
