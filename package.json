@@ -19,20 +19,13 @@
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
     "gulp-rev": "^8.1.0",
-    "gulp-sourcemaps": "^2.6.1"
-  },
-  "devDependencies": {
+    "gulp-sourcemaps": "^2.6.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
     "css-mqpacker": "^6.0.1",
     "del": "^3.0.0",
-    "eslint": "^4.10.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0",
     "gulp-babel-minify": "^0.2.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-htmlmin": "^3.0.0",
@@ -40,11 +33,11 @@
     "gulp-mocha": "^4.3.1",
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0",
     "gulp-size": "^2.1.0",
     "gulp-usemin": "^0.3.28",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
-    "lost": "^8.2.0",
     "node-notifier": "^5.1.2",
     "path": "^0.12.7",
     "postcss-assets": "^5.0.0",
@@ -57,5 +50,13 @@
     "require-dir": "^0.3.2",
     "rucksack-css": "^1.0.2",
     "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-config-prettier": "^2.9.0"
   }
 }
