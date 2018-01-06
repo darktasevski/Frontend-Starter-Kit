@@ -1,24 +1,17 @@
 @font-face {
- font-family: "Open Sans";
- font-style: normal;
- font-weight: 400;
- src: local("Open Sans Regular"),local(OpenSans-Regular);
-}
-
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"),local(OpenSans-Regular); }
 @font-face {
- font-family: "Open Sans";
- font-style: normal;
- font-weight: 700;
- src: local("Open Sans Bold"),local(OpenSans-Bold);
-}
-
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"),local(OpenSans-Bold); }
 /*Variables*/
-
 :root {
-
- /*custom properties*/
-/*Custom media*/
-
+  /*custom properties*/
+  /*Custom media*/
   /* Material Design Adaptive Breakpoints */
   /*
     Below you'll find CSS media queries based on the breakpoint guidance
@@ -27,118 +20,44 @@
 
     http://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints
    */
-
   /* mobile-small */
-}
-
-:root {
-
- /*mobile-large*/
-}
-
-:root {
-
- /*mobile-small-landscape*/
-}
-
-:root {
-
- /*mobile-large-landscape*/
-}
-
-:root {
-
- /*tablet-small-landscape*/
-}
-
-:root {
-
- /*tablet-large-landscape*/
-}
-
-:root {
-
- /*tablet-small*/
-}
-
-:root {
-
- /*tablet-large*/
-}
-
-:root {
-
- /*desktop-x-small-landscape*/
-}
-
-:root {
-
- /*desktop-x-small*/
-}
-
-:root {
-
- /*desktop-small-landscape*/
-}
-
-:root {
-
- /*desktop-small*/
-}
-
-:root {
-
- /*desktop-medium-landscape*/
-}
-
-:root {
-
- /*desktop-medium*/
-}
-
-:root {
-
- /*desktop-large*/
-}
-
-:root {
-
- /*desktop-xlarge*/
-}
-
+  /* mobile-large */
+  /* mobile-small-landscape */
+  /* mobile-large-landscape */
+  /* tablet-small-landscape */
+  /* tablet-large-landscape */
+  /* tablet-small */
+  /* tablet-large */
+  /* desktop-x-small-landscape */
+  /* desktop-x-small */
+  /* desktop-small-landscape */
+  /* desktop-small */
+  /* desktop-medium-landscape */
+  /* desktop-medium */
+  /* desktop-large */
+  /* desktop-xlarge */ }
 /* root */
-
 /* Fonts */
-
 body {
-   font-family: 'Open Sans';
-}
-
+  font-family: 'Open Sans'; }
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
 *,
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
+          box-sizing: border-box; }
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -146,448 +65,97 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
+  background: #b3d4fc;
+  text-shadow: none; }
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
+  background: #b3d4fc;
+  text-shadow: none; }
 /*
  * A better looking default horizontal rule
  */
-
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-
 audio,
 canvas,
 iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
-}
-
+  vertical-align: middle; }
 /*
  * Remove default fieldset styles.
  */
-
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
+  border: 0;
+  margin: 0;
+  padding: 0; }
 /*
  * Allow only vertical resizing of textareas.
  */
-
 textarea {
-    resize: vertical;
-}
-
+  resize: vertical; }
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
-
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
 /* ==========================================================================
    Custom CSS
    ========================================================================== */
-
 .responsive {
-       font-size: calc(16px + 14 * ((100vw - 420px) / 860));
-   }
-
+  font-size: calc(16px + 14 * ((100vw - 420px) / 860)); }
 /* Just a test for postcss-assets resolve*/
-
 body {
-    background: url('../images/fog.jpg') no-repeat;
-    background-size: cover;
-}
-
-/*
-we can specify global variable to use flexbox as default instead of floats
-
-@lost flexbox flex;
-*/
-
-/* Grids */
-
-.grid-item {
-	background: rgb(107, 120, 133);
-	height: 100px;
-	margin-bottom: 20px;
-}
-
-.grid-one {
-	width: 100%; /* must be declared on parent*/
-}
-
-.grid-one:before { /* must be declared on parent*/
-	content: '';
-	display: table;
-}
-
-.grid-one:after { /* must be declared on parent*/
-	content: '';
-	display: table;
-	clear: both;
-}
-
-.grid-one div {
-	width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
-}
-
-.grid-one div:nth-child(1n) {
-	float: left;
-	margin-right: 30px;
-	clear: none;
-}
-
-.grid-one div:last-child {
-	margin-right: 0;
-}
-
-.grid-one div:nth-child(1n) {
-	margin-right: 0;
-	float: right;
-}
-
-.grid-one div:nth-child(1n + 1) {
-	clear: both;
-}
-
-.nested-grid {
-	background: red;
-	height: 50px;
-	margin-bottom: 10px;
-}
-
-/*		VERTICAL GRID 		*/
-
-.grid-two {
-	width: 100%;
-	height: 500px;
-	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
-	max-width:80%;
-	margin-left:auto;
-	margin-right:auto;
-	padding-left:48px;
-	padding-right:48px;
-	max-width:80%;
-	margin-left:auto;
-	margin-right:auto;
-	padding-left:3rem;
-	padding-right:3rem;
-	padding-top: 48px;
-	padding-top: 3rem;
-	background: rgb(166, 166, 166);
-}
-
-.grid-two:before {
-	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
-	content:'';
-	display:table;
-}
-
-.grid-two:after {
-	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
-	content:'';
-	display:table;
-	clear:both;
-}
-
-.grid-two:before {
-	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
-	content:'';
-	display:table;
-}
-
-.grid-two:after {
-	/* we can use lost center instead of lost utility: clearfix. Also second propertu in this is for padding(left, right)*/
-	content:'';
-	display:table;
-	clear:both;
-}
-
-.grid-two div {
-	/* lost row is for vertical grid */
-	width: 100%;
-	height: calc(99.9% * 1/5 - (30px - 30px * 1/5));
-	margin-bottom: 30px;
-	position: relative;
-}
-
-.grid-two div:last-child {
-	/* lost row is for vertical grid */
-	margin-bottom: 0;
-}
-
-.grid-two div > * {
-	/* lost row is for vertical grid */
-	position: absolute;
-	top: 50%;
-	right: auto;
-	bottom: auto;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.grid-two div p{
-	margin: 0;
-}
-
-/*  Waffle Grid*/
-
-.grid-three {
-	width: 100%;
-	max-width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 48px;
-	padding-right: 48px;
-	max-width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 3rem;
-	padding-right: 3rem;
-	height: 100vh;
-}
-
-.grid-three:before {
-	content: '';
-	display: table;
-}
-
-.grid-three:after {
-	content: '';
-	display: table;
-	clear: both;
-}
-
-.grid-three:before {
-	content: '';
-	display: table;
-}
-
-.grid-three:after {
-	content: '';
-	display: table;
-	clear: both;
-}
-
-.grid-three div {
-	width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
-	font-size: 2em;
-	background: rgb(166, 107, 0);
-}
-
-.grid-three div:nth-child(1n) {
-	float: left;
-	margin-right: 30px;
-	clear: none;
-}
-
-.grid-three div:last-child {
-	margin-right: 0;
-}
-
-.grid-three div:nth-child(1n) {
-	margin-right: 0;
-	float: right;
-}
-
-.grid-three div:nth-child(1n + 1) {
-	clear: both;
-}
-
-/*  Flexbox Grid  */
-
-.grid-four {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	max-width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 48px;
-	padding-right: 48px;
-	display: flex;
-	flex-flow: row wrap;
-	max-width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 3rem;
-	padding-right: 3rem;
-	height: 60vh;
-}
-
-.grid-four div {
-	width: calc(99.9% * 1/1 - (30px - 30px * 1/1));
-	font-size: 2em;
-	background: rgb(0, 102, 102);
-}
-
-.grid-four div:nth-child(1n) {
-	float: left;
-	margin-right: 30px;
-	clear: none;
-}
-
-.grid-four div:last-child {
-	margin-right: 0;
-}
-
-.grid-four div:nth-child(1n) {
-	margin-right: 0;
-	float: right;
-}
-
-.grid-four div:nth-child(1n + 1) {
-	clear: both;
-}
-
-/* html setup */
-
-/*<div>
-        <section class="grid-one">
-        <div class="grid-item">
-            <div class="nested-grid"></div>
-            <div class="nested-grid"></div>
-        </div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-    </section>
-    <section class="grid-one">
-        <div class="grid-item">
-            <div class="nested-grid"></div>
-            <div class="nested-grid"></div>
-        </div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-    </section>
-    </div>
-
-    <div>
-        <section class="grid-two">
-        <div class="grid-item">
-            <div class="nested-grid"></div>
-            <div class="nested-grid"></div>
-        </div>
-        <div class="grid-item"><p>This is paragraph!</p></div>
-        <div class="grid-item"><p>This is paragraph!</p></div>
-        <div class="grid-item"><p>This is paragraph!</p></div>
-    </section>
-    </div>
-
-    <div>
-        <section class="grid-three">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
-        <div class="grid-item">10</div>
-        <div class="grid-item">11</div>
-        <div class="grid-item">12</div>
-    </section>
-    </div>
-
-    <div>
-        <section class="grid-four">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
-        <div class="grid-item">10</div>
-        <div class="grid-item">11</div>
-        <div class="grid-item">12</div>
-    </section>
-    </div>*/
-
+  background: url('../images/fog.jpg') no-repeat;
+  background-size: cover; }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
-
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-
 .invisible {
-    visibility: hidden;
-}
-
+  visibility: hidden; }
 /*
  * Clearfix: contain floats
  *
@@ -599,420 +167,108 @@ we can specify global variable to use flexbox as default instead of floats
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
 .clearfix:after {
-    clear: both;
-}
-
+  clear: both; }
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
-@media all and (min-width: 361px) and (orientation: portrait) {
-
- :root {}
-}
-
-@media all and (min-width: 481px) and (orientation: landscape) {
-
- :root {}
-}
-
-@media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) {
-
- :root {}
-}
-
-@media all and (min-width: 481px) and (max-width: 840px) and (orientation: landscape) {
-
- :root {}
-}
-
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; }
+.css_nano,
+.css_nano + p,
+[class*="css_nano"],
+.css_nano {
+  /* cssnano will remove this comment */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: normal;
+  margin-top: 16px;
+  margin-top: 1rem;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+  margin-left: 24px;
+  margin-left: 1.5rem;
+  margin-right: 40px;
+  margin-right: 2.5rem;
+  font-weight: normal;
+  padding: 28px;
+  padding: 1.75rem;
+  width: 744px;
+  width: 46.5rem; }
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media (min-width: 576px) {
-
- .grid-one div {
-  width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
- }
-
- .grid-one div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
- }
-
- .grid-one div:last-child {
-  margin-right: 0;
- }
-
- .grid-one div:nth-child(2n) {
-  margin-right: 0;
-  float: right;
- }
-
- .grid-one div:nth-child(2n + 1) {
-  clear: both;
- }
-
- .grid-three div {
-  width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
- }
-
- .grid-three div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
- }
-
- .grid-three div:last-child {
-  margin-right: 0;
- }
-
- .grid-three div:nth-child(2n) {
-  margin-right: 0;
-  float: right;
- }
-
- .grid-three div:nth-child(2n + 1) {
-  clear: both;
- }
-
- .grid-four div {
-  width: calc(99.9% * 1/2 - (30px - 30px * 1/2));
- }
-
- .grid-four div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
- }
-
- .grid-four div:last-child {
-  margin-right: 0;
- }
-
- .grid-four div:nth-child(2n) {
-  margin-right: 0;
-  float: right;
- }
-
- .grid-four div:nth-child(2n + 1) {
-  clear: both;
- }
-}
-
-@media all and (min-width: 600px) and (max-width: 960px) and (orientation: landscape) {
-
- :root {}
-}
-
-@media all and (min-width: 600px) and (orientation: portrait) {
-
- :root {}
-}
-
-@media all and (min-width: 601px) and (max-width: 840px) and (orientation : portrait) {
-
- :root {}
-}
-
-@media (min-width: 768px) {
-
- .grid-one div {
-  width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
- }
-
- .grid-one div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
- }
-
- .grid-one div:last-child {
-  margin-right: 0;
- }
-
- .grid-one div:nth-child(3n) {
-  margin-right: 0;
-  float: right;
- }
-
- .grid-one div:nth-child(3n + 1) {
-  clear: both;
- }
-
- .grid-three div {
-  width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
- }
-
- .grid-three div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
- }
-
- .grid-three div:last-child {
-  margin-right: 0;
- }
-
- .grid-three div:nth-child(3n) {
-  margin-right: 0;
-  float: right;
- }
-
- .grid-three div:nth-child(3n + 1) {
-  clear: both;
- }
-
- .grid-four div {
-  width: calc(99.9% * 1/3 - (30px - 30px * 1/3));
- }
-
- .grid-four div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
- }
-
- .grid-four div:last-child {
-  margin-right: 0;
- }
-
- .grid-four div:nth-child(3n) {
-  margin-right: 0;
-  float: right;
- }
-
- .grid-four div:nth-child(3n + 1) {
-  clear: both;
- }
-}
-
-@media all and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
-
- :root {}
-}
-
-@media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) {
-
- :root {}
-}
-
-@media all and (min-width: 961px) and (orientation: landscape) {
-
- :root {}
-}
-
-@media (min-width: 992px) {
-
- .grid-one div {
-  width: calc(99.9% * 1/6 - (30px - 30px * 1/6));
- }
-
- .grid-one div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  clear: none;
- }
-
- .grid-one div:last-child {
-  margin-right: 0;
- }
-
- .grid-one div:nth-child(6n) {
-  margin-right: 0;
-  float: right;
- }
-
- .grid-one div:nth-child(6n + 1) {
-  clear: both;
- }
-
- .grid-three div {
-  width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
-  height: calc(99.9% * 1/4 - (30px - 30px * 1/4));
- }
-
- .grid-three div:nth-child(1n) {
-  float: left;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  clear: none;
- }
-
- .grid-three div:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
- }
-
- .grid-three div:nth-child(4n) {
-  margin-right: 0;
- }
-
- .grid-three div:nth-child(4n + 1) {
-  clear: both;
- }
-
- .grid-three div:nth-last-child(-n + 4) {
-  margin-bottom: 0;
- }
-
- .grid-four div {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: calc(99.9% * 1/4 - (30px - 30px * 1/4));
-  max-width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
-  width: calc(99.9% * 1/4 - (30px - 30px * 1/4));
- }
-
- .grid-four div:nth-child(1n) {
-  margin-right: 30px;
-  margin-left: 0;
- }
-
- .grid-four div:last-child {
-  margin-right: 0;
- }
-
- .grid-four div:nth-child(4n) {
-  margin-right: 0;
-  margin-left: auto;
- }
-}
-
+  /* Style adjustments for viewports that meet the condition */ }
 @media screen and (min-width: 1280px) {
-
- .responsive {
-  font-size: 30px;
- }
-}
-
-@media all and (min-width: 1281px) and (max-width: 1600px) {
-
- :root {}
-}
-
-@media all and (min-width: 1601px) and (max-width: 1920px) {
-
- :root {}
-}
-
-@media all and (min-width: 0) and (max-width: 360px) and (orientation: portrait) {
-
- :root {}
-}
-
-@media all and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4/3) {
-
- :root {}
-}
-
-@media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) {
-
- :root {}
-
- :root {}
-}
-
+  .responsive {
+    font-size: 30px; } }
 @media screen and (max-width: 420px) {
-
- .responsive {
-  font-size: 16px;
- }
-}
-
+  .responsive {
+    font-size: 16px; } }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
+  /* Style adjustments for high resolution devices */ }
 @media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        -webkit-box-shadow: none !important;
-                box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
 
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
 /*# sourceMappingURL=main.css.map */
