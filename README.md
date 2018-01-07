@@ -1,12 +1,13 @@
 
 # Frontend Starter Kit
 
-A boilerplate for frontend projects powered by [Gulp](https://github.com/gulpjs/gulp), latest [HTML5 bolierplate](https://github.com/h5bp/html5-boilerplate), [PostCss](https://github.com/postcss/postcss) and  Webpack(for Babel transpiling).
+A boilerplate for frontend projects powered by [Gulp](https://github.com/gulpjs/gulp), latest [HTML5 bolierplate](https://github.com/h5bp/html5-boilerplate), [Sass](http://sass-lang.com/), [PostCss](https://github.com/postcss/postcss),  [Webpack](https://webpack.js.org/)(for transpiling latest ES6/ES7), and [Eslint](https://eslint.org/) with [AirBnB config](https://github.com/airbnb/javascript) and [Prettier](https://github.com/prettier/prettier).
 
 
 ### Prerequisites
 
-The only requirement is  [npm](https://www.npmjs.com/get-npm).
+[npm](https://www.npmjs.com/get-npm).
+[Gulp](https://github.com/gulpjs/gulp)
 
 ### Installing
 
