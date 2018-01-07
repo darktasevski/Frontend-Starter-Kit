@@ -33,8 +33,7 @@ This is how proccesing tree looks like:
 					cssnext(),	// http://cssnext.io/features/
 						rucksack(), // http://simplaio.github.io/rucksack/docs/#
 							require('postcss-nesting'),
-								lost(), 
-									reporter()
+								reporter()
 			]))
 ```
 I'll explain shortly what each of this plugins do.
@@ -51,8 +50,6 @@ I'll explain shortly what each of this plugins do.
 typography__.
 
 [('postcss-nesting')](https://github.com/jonathantneal/postcss-nesting) allows writing nested CSS.
-
-[lost()](http://lostgrid.org) the must if you are planning to work with grids! PS: lost must be loaded after postcss-nesting, so that media queries can work with it http://lostgrid.org/lostgrid-example.html
 
 __Usage:__ `gulp styles`
 
@@ -75,6 +72,8 @@ __Usage:__ `gulp scripts`
 Fork it if you can see a way to improve it or suggest improvenments, PR's are welcome.
 
 ## Changelog
+* 0.2.0 Added Sass support, updated dependencies and removed Lost Grid in favor of native CSS Grids
+...
 * 0.1.5 Added gulp-load-plugins to build, and improved perfomance and startup time of tasks
 * 0.1.4 Changed deprecated es-2015 babel preset to babel-preset-env., and added HTML minifier to build.
 * 0.1.3 Removed gulp-uglify( problems with minifying ES6 code, and moved to babel-minify.
