@@ -6,8 +6,8 @@ A boilerplate for frontend projects powered by [Gulp](https://github.com/gulpjs/
 
 ### Prerequisites
 
-[npm](https://www.npmjs.com/get-npm).
-[Gulp](https://github.com/gulpjs/gulp)
+* [npm](https://www.npmjs.com/get-npm).
+* [Gulp](https://github.com/gulpjs/gulp)
 
 ### Installing
 
