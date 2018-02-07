@@ -1,30 +1,25 @@
-@import "base/variables";
-@import "base/fonts";
-@import "base/basetop";
-@import "base/grids";
+@charset 'UTF-8';
 
-@import "base/basebottom";
+// 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
 
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+// 2. Vendors
+@import 'vendor/normalize';
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
+// 3. Base stuff
+@import 'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers',
+  'base/animations';
 
-.css_nano,
-.css_nano + p,
-[class*="css_nano"],
-.css_nano {
-  /* cssnano will remove this comment */
-  display: flex;
-  font-weight: normal;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  margin-left: 1.5rem;
-  margin-right: 2.5rem;
-  font-weight: normal;
-  padding: 1.75rem;
-  width: calc(50rem - (2 * 1.75rem));
-}
+// 4. Layout-related sections
+@import 'layout/grids';
+
+// 5. Components
+
+// 6. Page-specific styles
+@import 'pages/home';
+
+// 7. Themes
+@import 'themes/default';

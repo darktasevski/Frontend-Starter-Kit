@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+/* Fonts */
+
+html {
+  // 1rem = 10px; 10px/16px = 62.5%
+  font-size: var(--font-size-base);
+  @include respond(big-desktop) {
+    // 1rem = 12px; 12/16 = 75%; width > 1800?;
+    font-size: 75%;
+  }
+  @include respond(tab-land) {
+    // 1rem = 9px; 9/16 = 56.25%; width < 1200?;
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    // 1rem = 8px; 8/16 = 50%; width < 900?;
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Lato', 'Open Sans';
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  color: var(--gray);
+}

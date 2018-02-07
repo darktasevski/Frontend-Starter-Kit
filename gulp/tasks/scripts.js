@@ -1,20 +1,17 @@
-var gulp 		= require('gulp'),
-webpack	 		= require('webpack'),
-gulpNotify 	= require('gulp-notify'),
-gutil 			= require('gulp-util'),
-notifier 		= require('node-notifier'),
-onError 		= require( '../utilities/errorHandler');
+const gulp = require('gulp');
+const webpack = require('webpack');
+const notifier = require('node-notifier');
 
-gulp.task('scripts',['modernizr'], function(callback){
-	webpack(require('../../webpack.config.js'), function(err, stats){
-		if (stats.compilation.errors.length) {
-				// Notifiers if errors
-				notifier.notify({
-				  title: 'Webpack error',
-				  message: stats.compilation.errors[0].error.toString("utf8")
-				});
-			  }
-		console.log(stats.toString());
-		callback();
-	});
-})
+gulp.task('scripts', ['modernizr'], (callback) => {
+  webpack(require('../../webpack.config.js'), (err, stats) => {
+    if (stats.compilation.errors.length) {
+      // Notifiers if errors
+      notifier.notify({
+        title: 'Webpack error',
+        message: stats.compilation.errors[0].error.toString('utf8')
+      });
+    }
+    console.log(stats.toString());
+    callback();
+  });
+});

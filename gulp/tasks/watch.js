@@ -1,45 +1,43 @@
-const gulp = require("gulp"),
-  browserSync = require("browser-sync").create();
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
 
-var $ = require("gulp-load-plugins")({
-  pattern: ["gulp-*", "gulp.*"],
+const $ = require('gulp-load-plugins')({
+  pattern: ['gulp-*', 'gulp.*'],
   replaceString: /\bgulp[\-.]/,
   lazy: true,
-  scope: ["dependencies", "devDependencies"]
+  scope: ['dependencies', 'devDependencies']
 });
 
-gulp.task("watch", function() {
-  $.util.log("---------------------------------------");
-  $.util.log("Night gathers, and now my watch begins.");
-  $.util.log("---------------------------------------");
+gulp.task('watch', () => {
+  $.util.log('---------------------------------------');
+  $.util.log('Night gathers, and now my watch begins.');
+  $.util.log('---------------------------------------');
 
   browserSync.init({
     // Customize the Browsersync console logging prefix
-    logPrefix: " 💻 ",
+    logPrefix: ' 💻 ',
     server: {
-      baseDir: "app",
-      index: "index.html"
+      baseDir: 'app',
+      index: 'index.html'
     },
     port: 3000
   });
 
-  $.watch("./app/index.html", function() {
+  $.watch('./app/index.html', () => {
     browserSync.reload();
   });
 
-  $.watch("./app/assets/styles/**/*.+(css|scss)", function() {
-    gulp.start("cssInject");
+  $.watch('./app/assets/styles/**/*.+(css|scss)', () => {
+    gulp.start('cssInject');
   });
 
-  $.watch("./app/assets/scripts/**/*.js", function() {
-    gulp.start("scriptsRefresh");
+  $.watch('./app/assets/scripts/**/*.js', () => {
+    gulp.start('scriptsRefresh');
   });
 });
 
-gulp.task("cssInject", ["styles"], function() {
-  return gulp.src("./app/temp/styles/main.css").pipe(browserSync.stream());
-});
+gulp.task('cssInject', ['styles'], () => gulp.src('./app/temp/styles/main.css').pipe(browserSync.stream()));
 
-gulp.task("scriptsRefresh", ["scripts"], function() {
+gulp.task('scriptsRefresh', ['scripts'], () => {
   browserSync.reload();
 });

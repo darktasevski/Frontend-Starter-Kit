@@ -7,15 +7,9 @@
 // from: https://stackoverflow.com/questions/27024431/updating-gulp-plugins
 // As a general rule, and as a last resort, we better clean the npm cache with
 // $ npm cache clean
-'use strict';
 
-var requireDir = require('require-dir');
+
+const requireDir = require('require-dir');
 
 // Require all tasks in gulp/tasks, including subfolders
 requireDir('./gulp/tasks', { recurse: true });
-
-
-
-
-
-

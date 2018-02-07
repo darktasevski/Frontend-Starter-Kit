@@ -1,0 +1,175 @@
+/*Variables*/
+
+:root {
+  --white: #fff;
+  --black: #000;
+
+  --eggshell: #eee8d6;
+  --darkblue: #022933;
+  --yellow: #f3d350;
+  --blue: #0076a3;
+  --green: #bfc406;
+  --orange: #dc762b;
+  --red: #d14348;
+  --purple: #6d73c2;
+
+  --color-light: var(--white);
+  --color-dark: var(--black);
+  --color-main: var(--color-light);
+  --color-background: var(--blue);
+  --color-links: var(--yellow);
+  --color-navigation-links: var(--blue);
+
+  --font-size-base: 1.3rem;
+  --line-height-base: 150%;
+  --font-primary: 'Work Sans', -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --font-weight-light: 100;
+  --font-weight-normal: 300;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /*custom properties*/
+  --container-small-width: 50%;
+  --container-default-width: 90%;
+  --container-max-width: 1200px;
+
+  --width-standard: {
+    width: var(--container-default-width);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+  }
+  /*Custom media*/
+  @custom-media --viewport-small (width >= 576px);
+  @custom-media --viewport-medium (width >= 768px);
+  @custom-media --viewport-large (width >= 992px);
+  @custom-media --viewport-extralarge (width >= 1200px);
+
+  @custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+  /* Material Design Adaptive Breakpoints */
+  /*
+    Below you'll find CSS media queries based on the breakpoint guidance
+    published by the Material Design team. You can choose to use, customise
+    or remove these breakpoints based on your needs.
+
+    http://www.google.com/design/spec/layout/adaptive-ui.html#adaptive-ui-breakpoints
+   */
+
+  /* mobile-small */
+  @media all and (min-width: 0) and (max-width: 360px) and (orientation: portrait) {
+  }
+  /* mobile-large */
+  @media all and (min-width: 361px) and (orientation: portrait) {
+  }
+  /* mobile-small-landscape */
+  @media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) {
+  }
+  /* mobile-large-landscape */
+  @media all and (min-width: 481px) and (orientation: landscape) {
+  }
+  /* tablet-small-landscape */
+  @media all and (min-width: 600px) and (max-width: 960px) and (orientation: landscape) {
+  }
+  /* tablet-large-landscape */
+  @media all and (min-width: 961px) and (orientation: landscape) {
+  }
+  /* tablet-small */
+  @media all and (min-width: 600px) and (orientation: portrait) {
+  }
+  /* tablet-large */
+  @media all and (min-width: 601px) and (max-width: 840px) and (orientation: portrait) {
+  }
+  /* desktop-x-small-landscape */
+  @media all and (min-width: 0) and (max-width: 480px) and (orientation: landscape) {
+  }
+  /* desktop-x-small */
+  @media all and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4/3) {
+  }
+  /* desktop-small-landscape */
+  @media all and (min-width: 481px) and (max-width: 840px) and (orientation: landscape) {
+  }
+  /* desktop-small */
+  @media all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3) {
+  }
+  /* desktop-medium-landscape */
+  @media all and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
+  }
+  /* desktop-medium */
+  @media all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3) {
+  }
+  /* desktop-large */
+  @media all and (min-width: 1281px) and (max-width: 1600px) {
+  }
+  /* desktop-xlarge */
+  @media all and (min-width: 1601px) and (max-width: 1920px) {
+  }
+} /* root */
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+  'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+$primary-light-green: #7ed56f;
+$primary-green: #55c57a;
+$primary-dark-green: #28b485;
+
+$secondary-light: #ffb900;
+$secondary-dark: #ff7730;
+
+$tertiary-light: #2998ff;
+$tertiary-dark: #5643fa;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: ('small': 320px, 'medium': 768px, 'large': 1024px) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+// Grid
+
+$grid-width: 114rem;
+$grid-width-small: 50rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;

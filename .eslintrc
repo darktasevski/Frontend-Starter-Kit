@@ -25,6 +25,5 @@
         "argsIgnorePattern": "req|res|next|^err"
       }
     ]
-  },
-  "plugins": ["html", "markdown"]
+  }
 }
