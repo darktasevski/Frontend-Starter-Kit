@@ -1,25 +1,22 @@
 @charset 'UTF-8';
 
 // 1. Configuration and helpers
-@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
+@import 'abstracts/index';
 
 // 2. Vendors
 @import 'vendor/normalize';
 
 // 3. Base stuff
-@import 'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers',
-  'base/animations';
+@import 'base/index';
 
 // 4. Layout-related sections
-@import 'layout/grids';
+@import 'layout/index';
 
 // 5. Components
+@import 'components/index';
 
 // 6. Page-specific styles
-@import 'pages/home';
+@import 'pages/index';
 
 // 7. Themes
-@import 'themes/default';
+@import 'themes/index';
