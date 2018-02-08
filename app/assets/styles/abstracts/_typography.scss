@@ -44,14 +44,24 @@ $line-height-small: 1.5 !default;
 // Round a number down
 $line-height-count: floor(($font-size-base * $line-height-base)) !default;
 
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+  'Monaco', monospace !default;
+// or
+$font-family-monospace: 'Inconsolata', 'Menlo', 'Consolas',
+  'Bitstream Vera Sans Mono', 'Courier', monospace;
+
 // font family
 $font-family-fallback: 'Arial', sans-serif;
 $font-family-open: 'industry', sans-serif, $font-family-fallback;
 $font-family-base: $font-family-open;
 $font-family-second: $font-family-open;
-
-$font-family-monospace: 'Inconsolata', 'Menlo', 'Consolas',
-  'Bitstream Vera Sans Mono', 'Courier', monospace;
 
 @if variable-exists(google-fonts-url) {
   @import url($google-fonts-url);
