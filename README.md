@@ -6,6 +6,7 @@ A boilerplate for frontend projects powered by [Gulp](https://github.com/gulpjs/
 
 ### Prerequisites
 
+* Small amount of time to setup config :)
 * [npm](https://www.npmjs.com/get-npm).
 * [Gulp](https://github.com/gulpjs/gulp)
 
@@ -23,9 +24,10 @@ The basic usage of Frontend Starter Kit starts with `gulp watch` task, and it's 
 __Usage__: just type in terminal `gulp watch` .
 
 #### gulp styles
-This task starts CSS processing, which process your code through few postcss plugins one by one. Code is being transpiled to CSS supported syntax, vendor prefixes are added for some properties, and a bunch of other things that you can look up in plugins docs.
+This task starts CSS processing, which process your code through Sass first, then through a few postcss plugins one by one. Code is being transpiled to CSS supported syntax, vendor prefixes are added for some properties, and a bunch of other things that you can look up in plugins docs.
 This is how proccesing tree looks like: 
 ```
+.sass.()
 .pipe(postcss([
 	require('postcss-partial-import')({prefix: '_', extension: '.css'}),
 		postcssurl(),
@@ -73,8 +75,10 @@ __Usage:__ `gulp scripts`
 Fork it if you can see a way to improve it or suggest improvenments, PR's are welcome.
 
 ## Changelog
+* 0.3.0 Improved Sass support and proccessing, added a bunch of default Sass mixins, functions and placeholder variables. Also implemented possibility of using HTML templates.
+-------------------------------------------------------------------------------------------
 * 0.2.0 Added Sass support, updated dependencies and removed Lost Grid in favor of native CSS Grids
-...
+-------------------------------------------------------------------------------------------
 * 0.1.5 Added gulp-load-plugins to build, and improved perfomance and startup time of tasks
 * 0.1.4 Changed deprecated es-2015 babel preset to babel-preset-env., and added HTML minifier to build.
 * 0.1.3 Removed gulp-uglify( problems with minifying ES6 code, and moved to babel-minify.
