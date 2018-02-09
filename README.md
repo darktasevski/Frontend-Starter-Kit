@@ -64,7 +64,7 @@ __Usage:__ `gulp scripts`
 
 #### gulp modernizr 
 
-`gulp modernizr` provides support for older browsers( IE6, IE7.. ) that doesnt support flexbox or other new CSS and Js stuff. This task is started automaticaly each time a js file is saved while in `gulp watch` mode, but it cant be started manually with `gulp modernizr` command.
+`gulp modernizr` provides support for older browsers( IE6, IE7.. ) that doesnt support flexbox or other new CSS and Js stuff. This task is started automaticaly each time a js file is saved while in `gulp watch` mode, but it can be started manually with `gulp modernizr` command.
 
 #### gulp build
 
