@@ -23,9 +23,16 @@ gulp.task('watch', () => {
     port: 3000
   });
 
-  $.watch('./app/index.html', () => {
-    browserSync.reload();
-  });
+  $.watch(
+    [
+      './app/html/index.html',
+      './app/html/templates/*.html',
+      './app/index.html'
+    ],
+    () => {
+      gulp.start('htmlRefresh');
+    }
+  );
 
   $.watch('./app/assets/styles/**/*.+(css|scss)', () => {
     gulp.start('cssInject');
@@ -36,8 +43,13 @@ gulp.task('watch', () => {
   });
 });
 
-gulp.task('cssInject', ['styles'], () => gulp.src('./app/temp/styles/main.css').pipe(browserSync.stream()));
+gulp.task('cssInject', ['styles'], () =>
+  gulp.src('./app/temp/styles/main.css').pipe(browserSync.stream()));
 
 gulp.task('scriptsRefresh', ['scripts'], () => {
+  browserSync.reload();
+});
+
+gulp.task('htmlRefresh', ['html'], () => {
   browserSync.reload();
 });
