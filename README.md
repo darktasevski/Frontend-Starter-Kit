@@ -1,4 +1,4 @@
-this project is bootstraped with
+This project is bootstraped with
 
 # Frontend Starter Kit
 
