@@ -8,7 +8,8 @@
   },
   "private": true,
   "scripts": {
-    "server": "browser-sync start --directory --server --files '*.js, *.html, *.css'"
+    "server":
+      "browser-sync start --directory --server --files '*.js, *.html, *.css'"
   },
   "author": "Puritanic",
   "license": "MIT",
@@ -18,7 +19,6 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
-    "css-mqpacker": "^6.0.1",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-babel-minify": "^0.2.0",
@@ -27,7 +27,6 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.4.0",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-mocha": "^4.3.1",
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",

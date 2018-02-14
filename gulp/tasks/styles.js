@@ -5,7 +5,7 @@ const onError = require('../utilities/errorHandler');
 
 const $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'gulp.*'],
-  replaceString: /\bgulp[\-.]/,
+  replaceString: /\bgulp[-.]/,
   lazy: true,
   camelize: true,
   scope: ['dependencies', 'devDependencies']
@@ -44,7 +44,6 @@ gulp.task('styles', () =>
       require('postcss-cssnext')(), // http://cssnext.io/features/
       rucksackCss(), // http://simplaio.github.io/rucksack/docs/#
       require('postcss-nesting'),
-      require('css-mqpacker')({ sort: true }),
       require('postcss-reporter')()
     ]))
     .pipe($.sourcemaps.write('./'))
