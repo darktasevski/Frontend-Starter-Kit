@@ -26,8 +26,7 @@ gulp.task('watch', () => {
   $.watch(
     [
       './app/html/index.html',
-      './app/html/templates/*.html',
-      './app/index.html'
+      './app/html/templates/*.html'
     ],
     () => {
       gulp.start('htmlRefresh');
