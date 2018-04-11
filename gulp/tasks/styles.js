@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const fontMagician = require('postcss-font-magician');
 const onError = require('../utilities/errorHandler');
-var sorting = require('postcss-sorting');
+const sorting = require('postcss-sorting');
 
 const $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'gulp.*'],
@@ -21,44 +21,39 @@ const paths = {
 gulp.task('styles', () =>
   gulp
     .src(paths.cssSource)
-    .pipe(
-      $.plumber({
-        errorHandler: onError
-      })
-    )
+    .pipe($.plumber({
+      errorHandler: onError
+    }))
     .pipe($.sourcemaps.init())
     .pipe($.sass().on('error', $.sass.logError))
-    .pipe(
-      $.postcss([
-        require('postcss-partial-import')({
-          prefix: '_',
-          extension: '.css'
-        }),
-        require('postcss-assets')({
-          basePath: 'app',
-          loadPaths: ['assets/images'],
-          cachebuster: true
-        }), // assets url handling -- https://github.com/borodean/postcss-assets
-        require('postcss-normalize')({ browsers: 'last 2 versions' }),
-        fontMagician({
-          hosted: ['./app/assets/fonts']
-        }), // https://github.com/jonathantneal/postcss-font-magician
-        require('postcss-cssnext')(), // http://cssnext.io/features/
-        sorting({
-          order: [
-            'custom-properties',
-            'dollar-variables',
-            'declarations',
-            'at-rules',
-            'rules'
-          ],
-          'properties-order': 'alphabetical',
-          'unspecified-properties-position': 'bottom'
-        }),
-        require('postcss-reporter')()
-      ])
-    )
+    .pipe($.postcss([
+      require('postcss-partial-import')({
+        prefix: '_',
+        extension: '.css'
+      }),
+      require('postcss-assets')({
+        basePath: 'app',
+        loadPaths: ['assets/images'],
+        cachebuster: true
+      }), // assets url handling -- https://github.com/borodean/postcss-assets
+      require('postcss-normalize')({ browsers: 'last 2 versions' }),
+      fontMagician({
+        hosted: ['./app/assets/fonts']
+      }), // https://github.com/jonathantneal/postcss-font-magician
+      require('postcss-cssnext')(), // http://cssnext.io/features/
+      sorting({
+        order: [
+          'custom-properties',
+          'dollar-variables',
+          'declarations',
+          'at-rules',
+          'rules'
+        ],
+        'properties-order': 'alphabetical',
+        'unspecified-properties-position': 'bottom'
+      }),
+      require('postcss-reporter')()
+    ]))
     .pipe($.sourcemaps.write('./'))
     .pipe($.plumber.stop())
-    .pipe(gulp.dest(paths.cssDest))
-);
+    .pipe(gulp.dest(paths.cssDest)));

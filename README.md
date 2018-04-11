@@ -27,36 +27,53 @@ The basic usage of Frontend Starter Kit starts with `gulp watch` task, and it's 
 #### gulp styles
 
 This task starts CSS processing, which process your code through Sass first, then through a few postcss plugins one by one. Code is being transpiled to CSS supported syntax, vendor prefixes are added for some properties, and a bunch of other things that you can look up in plugins docs.
-This is how proccesing tree looks like:
+This is how processing tree looks like:
 
-```
-.sass.()
-.pipe(postcss([
-	require('postcss-partial-import')({prefix: '_', extension: '.css'}),
-		postcssurl(),
-			require('postcss-normalize')({browsers: 'last 2 versions'}),
-				fontMagician(),	// https://github.com/jonathantneal/postcss-font-magician
-					cssnext(),	// http://cssnext.io/features/
-						rucksack(), // http://simplaio.github.io/rucksack/docs/#
-							require('postcss-nesting'),
-								reporter()
-			]))
+```javascript
+ .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.postcss([
+      require('postcss-partial-import')({
+        prefix: '_',
+        extension: '.css'
+      }),
+      require('postcss-assets')({
+        basePath: 'app',
+        loadPaths: ['assets/images'],
+        cachebuster: true
+      }), // assets url handling -- https://github.com/borodean/postcss-assets
+      require('postcss-normalize')({ browsers: 'last 2 versions' }),
+      fontMagician({
+        hosted: ['./app/assets/fonts']
+      }), // https://github.com/jonathantneal/postcss-font-magician
+      require('postcss-cssnext')(), // http://cssnext.io/features/
+      sorting({
+        order: [
+          'custom-properties',
+          'dollar-variables',
+          'declarations',
+          'at-rules',
+          'rules'
+        ],
+        'properties-order': 'alphabetical',
+        'unspecified-properties-position': 'bottom'
+      }),
+      require('postcss-reporter')()
+    ]))
 ```
 
 I'll explain shortly what each of this plugins do.
 
 [postcssurl()](https://github.com/postcss/postcss-url) Allows you to fix url()s according to postcss to and/or from options (rebase to to first if available, otherwise from or process.cwd()).
 
+[postcss-assets](https://github.com/borodean/postcss-assets) Amazing plugin, imo the greatest option is that this allows you to resolve() image file locations instead of writing down exact url, but there are several other interesting features.
+
 [('postcss-normalize')](https://github.com/jonathantneal/postcss-normalize) PostCSS Normalize lets you use the parts of normalize.css you need, based on your project’s browserlist. You can specify which versions of browsers are you going to support in options like this `require('postcss-normalize')({browsers: 'last 2 versions'})`.
 
-[fontMagician](https://github.com/jonathantneal/postcss-font-magician) plugin that magically generates all of your @font-face rules.
+[fontMagician](https://github.com/jonathantneal/postcss-font-magician) plugin that magically generates all of your @font-face rules. NOTE: hosted fonts option doesn't seem to work.
 
 [cssnext()](https://github.com/postcss/postcss) PostCSS-cssnext is a PostCSS plugin that helps you to use the latest CSS syntax today. It transforms CSS specs into more compatible CSS so you don’t need to wait for browser support. Really powerfull plugin with long list of [features](http://cssnext.io/features/).
 
-[rucksack()](https://github.com/seaneking/rucksack) A plugin pack similar to postcss-cssnext, featuring incredible **responsive
-typography**.
-
-[('postcss-nesting')](https://github.com/jonathantneal/postcss-nesting) allows writing nested CSS.
+[PostCSS Sorting](https://github.com/hudochenkov/postcss-sorting) PostCSS plugin to keep rules and at-rules content in order.
 
 **Usage:** `gulp styles`
 
@@ -80,6 +97,8 @@ Fork it if you can see a way to improve it or suggest improvenments, PR's are we
 
 ## Changelog
 
+* 0.3.2 Cleaned, simplified and restructured Sass files, removed a few plugins and added postcss-sorting.
+* 0.3.1 Updated Webpack and several other packages.
 * 0.3.0 Improved Sass support and proccessing, added a bunch of default Sass mixins, functions and placeholder variables. Also implemented possibility of using HTML templates.
 
 ---
