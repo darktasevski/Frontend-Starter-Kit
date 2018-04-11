@@ -202,6 +202,7 @@ body {
   height: height('wp.jpg', 2);
   background-image: resolve('wp.jpg');
   background-repeat: no-repeat;
+
   background-size: cover;
 
   @include respond(tab-port) {

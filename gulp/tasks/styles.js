@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const fontMagician = require('postcss-font-magician');
 const onError = require('../utilities/errorHandler');
-const postcssImageSet = require('postcss-image-set-polyfill');
+var sorting = require('postcss-sorting');
 
 const $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'gulp.*'],
@@ -44,6 +44,17 @@ gulp.task('styles', () =>
           hosted: ['./app/assets/fonts']
         }), // https://github.com/jonathantneal/postcss-font-magician
         require('postcss-cssnext')(), // http://cssnext.io/features/
+        sorting({
+          order: [
+            'custom-properties',
+            'dollar-variables',
+            'declarations',
+            'at-rules',
+            'rules'
+          ],
+          'properties-order': 'alphabetical',
+          'unspecified-properties-position': 'bottom'
+        }),
         require('postcss-reporter')()
       ])
     )
