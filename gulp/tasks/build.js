@@ -93,13 +93,7 @@ gulp.task('usemin', ['styles', 'scripts'], () =>
         },
         function() {
           return $.cssnano({
-            discardComments: {
-              removeAll: true
-            },
-            discardDuplicates: true,
-            discardEmpty: true,
-            minifyFontValues: true,
-            minifySelectors: true
+            preset: ['default', { discardComments: { removeAll: true } }]
           });
         }
       ],
