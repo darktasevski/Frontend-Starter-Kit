@@ -724,7 +724,10 @@ body {
   padding: 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #ededed; }
+  background-color: #ededed;
+  background-image: url('/assets/images/wp.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 @media only screen and (max-width: 56.25em) {
     body {

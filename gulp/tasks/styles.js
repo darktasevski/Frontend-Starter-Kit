@@ -32,8 +32,7 @@ gulp.task('styles', () =>
       }),
       require('postcss-assets')({
         basePath: 'app',
-        loadPaths: ['assets/images'],
-        relative: 'assets/styles'
+        loadPaths: ['assets/images']
       }), // assets url handling
       require('postcss-normalize')({ browsers: 'last 2 versions' }),
       fontMagician({

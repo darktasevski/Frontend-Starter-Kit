@@ -198,6 +198,9 @@ body {
   padding: 3rem;
   box-sizing: border-box;
   background-color: $light-grey;
+  background-image: resolve('wp.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include respond(tab-port) {
     padding: 0;
