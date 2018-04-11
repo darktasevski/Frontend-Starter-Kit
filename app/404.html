@@ -1,60 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Page Not Found</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>404</title>
+  <style>
+    body,
+    html {
+      background: #000;
+      position: relative;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-        * {
-            line-height: 1.2;
-            margin: 0;
-        }
+    #mainC {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-family: sans-serif;
+      max-width: 340px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
 
-        html {
-            color: #888;
-            display: table;
-            font-family: sans-serif;
-            height: 100%;
-            text-align: center;
-            width: 100%;
-        }
+    #mainC .message {
+      font-size: 16px;
+      text-align: center;
+    }
 
-        body {
-            display: table-cell;
-            vertical-align: middle;
-            margin: 2em auto;
-        }
+    #mainC .message h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 11em;
+      -webkit-transform: skewY(-5deg);
+      transform: skewY(-5deg);
+      transition: 0.4s ease-in-out all;
+    }
 
-        h1 {
-            color: #555;
-            font-size: 2em;
-            font-weight: 400;
-        }
+    #mainC .message h1:hover {
+      text-shadow: 20px 20px 0 rgba(175, 211, 61, 0.1);
+    }
 
-        p {
-            margin: 0 auto;
-            width: 280px;
-        }
+    @media (max-width: 300px) {
+      #mainC .message h1 {
+        font-size: 50vw;
+      }
+    }
 
-        @media only screen and (max-width: 280px) {
+    #mainC .message h3 {
+      color: #afd33d;
+      font-size: 0.9em;
+      font-weight: lighter;
+      line-height: 1;
+    }
 
-            body, p {
-                width: 95%;
-            }
+    @media (max-width: 300px) {
+      #mainC .message h3 {
+        font-size: 5vw;
+      }
+    }
 
-            h1 {
-                font-size: 1.5em;
-                margin: 0 0 0.3em;
-            }
+    #mainC .footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+    }
 
-        }
+    #mainC .footer a {
+      position: relative;
+      flex: 1;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      border-radius: 3px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      margin: 0 20px;
+      text-align: center;
+      padding: 10px 0;
+      overflow: hidden;
+      transition: all 0.2s ease-in-out;
+      z-index: 3;
+    }
 
-    </style>
+    @media (max-width: 300px) {
+      #mainC .footer a {
+        flex: 5 100%;
+        width: 100%;
+      }
+    }
+
+    #mainC .footer a:hover {
+      border: 1px solid #ffffff;
+      color: #121212;
+    }
+
+    #mainC .footer a:hover span {
+      width: 310px;
+      height: 310px;
+    }
+
+    #mainC .footer a span {
+      content: '';
+      position: absolute;
+      background: #afd33d;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+      z-index: -1;
+    }
+
+    @media (max-width: 300px) {
+      #mainC .footer a span {
+        transition: all 0.2s ease-in;
+      }
+    }
+
+    #mainC .footer a span:active {
+      background: #c0dc67;
+    }
+
+    #mainC .footer .legal {
+      text-align: center;
+      flex: 3;
+      color: rgba(204, 204, 204, 0.5);
+    }
+
+    @media (max-width: 300px) {
+      #mainC .footer .legal {
+        font-size: 4vw;
+        flex: 5 100%;
+        padding: 5px 10px;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
-    <h1>Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
+  <div id="mainC">
+    <div class="message">
+      <h1>404</h1>
+      <h3>THE PAGE YOU SEEK DOES NOT EXIST</h3>
+    </div>
+    <div class="footer">
+      <a href="//leoh.me" title="home" target="_blank">Home
+        <span></span>
+      </a>
+      <p class="legal">&copy;&nbsp;&nbsp;2018 Front-end Starter Kit All rights reserved
+      </p>
+    </div>
+  </div>
 </body>
+
 </html>
-<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
