@@ -1,18 +1,111 @@
-// ===================================================================
-// Grid system
-// ===================================================================
-// [B] - Bootstrap usage
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass and CSS 3 variables.
+// -----------------------------------------------------------------------------
+/*CSS3 Variables*/
 
-// Configuration:
-// ********************************************
-$responsive-app: true; //TODO
-// ********************************************
+:root {
+  /*custom properties*/
+  --container-small-width: 50%;
+  --container-default-width: 90%;
+  --container-max-width: 1200px;
 
-$grid-gutter-width: 30px !default;
-$grid-columns: 12 !default;
+  --width-standard: {
+    width: var(--container-default-width);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+  }
+  @custom-selector :--headings h1, h2, h3, h4, h5, h6;
+} /* root */
+
+// Sass variables
+
+// Border radius
+// =============================================
+$border-radius-base: 0 !default;
+$border-radius-small: 3px !default;
+$border-radius-medium: 6px !default;
+
+// Buttons border-radius
+// =============================================
+$btn-border-radius-base: $border-radius-base !default;
+$btn-border-radius-small: $border-radius-small !default;
+$btn-border-radius-medium: $border-radius-medium !default;
+
+// Animation
+// =============================================
+$timeline-base: 0.4s !default;
+$timeline-fast: 0.2s !default;
+$timeline-slow: 0.8s !default;
+
+// Cursor controls
+// =============================================
+$cursor-active: pointer !default;
+$cursor-disabled: not-allowed !default;
+$cursor-resize: col-resize !default;
+
+// Padding for elements
+// =============================================
+$padding-base-vertical: 6px !default;
+$padding-base-horizontal: 12px !default;
+
+$padding-large-vertical: 10px !default;
+$padding-large-horizontal: 16px !default;
+
+$padding-small-vertical: 5px !default;
+$padding-small-horizontal: 10px !default;
+
+// Buttons
+// =============================================
+$btn-font-weight: normal !default;
+
+$btn-default-color: #fff !default;
+$btn-default-bg: $color-accent !default;
+$btn-default-border: darken($color-accent, 1%) !default;
+
+$btn-primary-color: #fff !default;
+$btn-primary-bg: $color-primary !default;
+$btn-primary-border: darken($btn-primary-bg, 5%) !default;
+
+// Inputs
+// =============================================
+$input-bg: #fff !default;
+$input-bg-disabled: $color-primary !default;
+$input-color: $color-primary !default;
+$input-border: #ccc !default;
+
+// Custom input-border-radius
+// =============================================
+$input-border-radius-base: $border-radius-base !default;
+$input-border-radius-medium: $border-radius-medium !default;
+$input-border-radius-small: $border-radius-small !default;
+
+$input-border-focus: #66afe9 !default;
+$input-color-placeholder: #999 !default;
+
+// Count input height
+// =============================================
+$input-height-base: (
+  $line-height-count + ($padding-base-vertical * 2) + 2
+) !default;
+$input-height-large: (
+  ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) +
+    2
+) !default;
+$input-height-small: (
+  floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) +
+    2
+) !default;
 
 // ===================================================================
-// BREAKPOINTS - [B]
+// BREAKPOINTS
+:root {
+  /*Custom media*/
+  @custom-media --viewport-small (width >= 576px);
+  @custom-media --viewport-medium (width >= 768px);
+  @custom-media --viewport-large (width >= 992px);
+  @custom-media --viewport-extralarge (width >= 1200px);
+}
+
 // ===================================================================
 // [B] for mobile first
 $screen-xs-min: 480px !default;
@@ -20,77 +113,69 @@ $screen-sm-min: 768px !default;
 $screen-md-min: 992px !default;
 $screen-lg-min: 1200px !default;
 
-// [B] formobile last
+// [B] for desktop first
 $screen-xs-max: ($screen-sm-min - 1) !default;
 $screen-sm-max: ($screen-md-min - 1) !default;
 $screen-md-max: ($screen-lg-min - 1) !default;
 $screen-lg-max: 1920px !default;
 
-// [B] container sizes
-$container-sm: (720px + $grid-gutter-width) !default;
-$container-md: (940px + $grid-gutter-width) !default;
-$container-lg: (1140px + $grid-gutter-width) !default;
-
 // List of [B]
 // $breakpoints for Bootstrap- {map}
 $breakpointsB: (
-    xs: $screen-xs-min,
-    sm: $screen-sm-min,
-    md: $screen-md-min,
-    lg: $screen-lg-min,
-    xl: $screen-lg-max
-  )
-  !default;
+  xs: $screen-xs-min,
+  sm: $screen-sm-min,
+  md: $screen-md-min,
+  lg: $screen-lg-min,
+  xl: $screen-lg-max
+) !default;
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: ('small': 320px, 'medium': 768px, 'large': 1024px) !default;
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px
+) !default;
 
 // ===================================================================
 // MEDIA QUERIES
 // ===================================================================
 // $media-query - {map}
 $mq: (
-    p: 'print',
-    s: 'screen',
-    ld: '(orientation: landscape)',
-    pt: '(orientation: portrait)',
-    hd: 'handheld',
-    r2:
-      (
-        '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi)'
-      ),
-    r3:
-      (
-        '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx), (min-resolution: 300dpi)'
-      ),
-    ar169: ('device-aspect-ratio: 16/9')
-  )
-  !default;
+  p: 'print',
+  s: 'screen',
+  ld: '(orientation: landscape)',
+  pt: '(orientation: portrait)',
+  hd: 'handheld',
+  r2:
+    (
+      '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi)'
+    ),
+  r3:
+    (
+      '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx), (min-resolution: 300dpi)'
+    ),
+  ar169: ('device-aspect-ratio: 16/9')
+) !default;
 
 // ===================================================================
 // z-index
 // ===================================================================
 // $zindex - {map}
 $zindex: (
-    null: 0,
-    back: -1000,
-    default: 1,
-    base: 1000,
-    footer: 1100,
-    header: 1000,
-    sidebar: 900,
-    drop: 1300,
-    overlay: 1400,
-    top: 1000,
-    modal: 1500
-  )
-  !default;
-
-@if ($responsive-app == false) {
-  $viewport-width: $container-lg !default;
-}
+  null: 0,
+  back: -1000,
+  default: 1,
+  base: 1000,
+  footer: 1100,
+  header: 1000,
+  sidebar: 900,
+  drop: 1300,
+  overlay: 1400,
+  top: 1000,
+  modal: 1500
+) !default;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

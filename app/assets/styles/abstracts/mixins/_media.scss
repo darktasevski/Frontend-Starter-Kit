@@ -5,22 +5,63 @@
 // @requires - ../_functions.scss
 
 @mixin media($conditions...) {
-	@for $i from 1 through length($conditions) {
-		$conditions: set-nth($conditions, $i, -w-parse-expression(nth($conditions, $i)));	
-	}
+  @for $i from 1 through length($conditions) {
+    $conditions: set-nth(
+      $conditions,
+      $i,
+      -w-parse-expression(nth($conditions, $i))
+    );
+  }
 
-	$concats: -w-concat($conditions);
-	$mq: "";
+  $concats: -w-concat($conditions);
+  $mq: '';
 
-	@each $concat in $concats {
-	    @if (str-length($mq) != 0) {
-	      $mq: $mq + ", ";
-	    }
-    	$mq: $mq + $concat;
-	}
+  @each $concat in $concats {
+    @if (str-length($mq) != 0) {
+      $mq: $mq + ', ';
+    }
+    $mq: $mq + $concat;
+  }
 
-	 @media #{$mq} {
-		@content;
-	 }
+  @media #{$mq} {
+    @content;
+  }
 }
 
+/*
+Media query manager mixin
+
+0-600px:    Phone
+600-900px:  Tablet-portrait mode
+900-1200px:  Tablet-landscape mode
+1200-1800px:  Desktop - this is where all current styles apply
+1800px:  xlDesktop
+
+1em === 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    // 600px
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    // 900px
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    // 1200px
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    // 1800px
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

@@ -53,3 +53,26 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// Dark grey
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
+
+// CSS3 Color variables
+:root {
+  --white: #fff;
+  --black: #000;
+
+  --eggshell: #eee8d6;
+  --darkblue: #022933;
+  --yellow: #f3d350;
+  --blue: #0076a3;
+  --green: #bfc406;
+  --orange: #dc762b;
+  --red: #d14348;
+  --purple: #6d73c2;
+  --grey: #777;
+
+  --color-light: var(--white);
+  --color-dark: var(--black);
+  --color-main: var(--color-light);
+  --color-background: var(--blue);
+  --color-links: var(--yellow);
+  --color-navigation-links: var(--blue);
+}

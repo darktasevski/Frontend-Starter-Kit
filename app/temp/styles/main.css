@@ -1,22 +1,13 @@
-@font-face{
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans Regular"),local(OpenSans-Regular); }
-@font-face{
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Open Sans Bold"),local(OpenSans-Bold); }
-@import url("https://fonts.googleapis.com/css?family=Exo:300,400,600,700,800,900&subset=latin-ext");
-/**
- * Basic typography styles
- */
 /*CSS3 Variables*/
+
 :root {
-  /*custom properties*/
-  /*Custom media*/ }
+  /*custom properties*/ }
+
 /* root */
+
+:root {
+  /*Custom media*/ }
+
 /*
 Media query manager mixin
 
@@ -28,15 +19,19 @@ Media query manager mixin
 
 1em === 16px
 */
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Correct the line height in all browsers.
  * 3. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+
 /* Document
    ========================================================================== */
+
 html {
   font-family: sans-serif;
   /* 1 */
@@ -46,16 +41,21 @@ html {
   /* 3 */
   -webkit-text-size-adjust: 100%;
   /* 3 */ }
+
 /* Sections
    ========================================================================== */
+
 /**
  * Remove the margin in all browsers (opinionated).
  */
+
 body {
   margin: 0; }
+
 /**
  * Add the correct display in IE 9-.
  */
+
 article,
 aside,
 footer,
@@ -63,33 +63,42 @@ header,
 nav,
 section {
   display: block; }
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
+
 /* Grouping content
    ========================================================================== */
+
 /**
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
  */
+
 figcaption,
 figure,
 main {
   /* 1 */
   display: block; }
+
 /**
  * Add the correct margin in IE 8.
  */
+
 figure {
   margin: 1em 40px; }
+
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
+
 hr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -98,37 +107,46 @@ hr {
   /* 1 */
   overflow: visible;
   /* 2 */ }
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
+
 pre {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */ }
+
 /* Text-level semantics
    ========================================================================== */
+
 /**
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
+
 a {
   background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
   /* 2 */ }
+
 /**
  * Remove the outline on focused links when they are also active or hovered
  * in all browsers (opinionated).
  */
+
 a:active,
 a:hover {
   outline-width: 0; }
+
 /**
  * 1. Remove the bottom border in Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
+
 abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -137,22 +155,28 @@ abbr[title] {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
   /* 2 */ }
+
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
+
 b,
 strong {
   font-weight: inherit; }
+
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
+
 b,
 strong {
   font-weight: bolder; }
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
+
 code,
 kbd,
 samp {
@@ -160,66 +184,88 @@ samp {
   /* 1 */
   font-size: 1em;
   /* 2 */ }
+
 /**
  * Add the correct font style in Android 4.3-.
  */
+
 dfn {
   font-style: italic; }
+
 /**
  * Add the correct background and color in IE 9-.
  */
+
 mark {
   background-color: #ff0;
   color: #000; }
+
 /**
  * Add the correct font size in all browsers.
  */
+
 small {
   font-size: 80%; }
+
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
+
 sub,
 sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
+
 sub {
   bottom: -0.25em; }
+
 sup {
   top: -0.5em; }
+
 /* Embedded content
    ========================================================================== */
+
 /**
  * Add the correct display in IE 9-.
  */
+
 audio,
 video {
   display: inline-block; }
+
 /**
  * Add the correct display in iOS 4-7.
  */
+
 audio:not([controls]) {
   display: none;
   height: 0; }
+
 /**
  * Remove the border on images inside links in IE 10-.
  */
+
 img {
   border-style: none; }
+
 /**
  * Hide the overflow in IE.
  */
+
 svg:not(:root) {
   overflow: hidden; }
+
 /* Forms
    ========================================================================== */
+
 /**
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
+
 button,
 input,
 optgroup,
@@ -233,63 +279,77 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */ }
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
+
 button,
 input {
   /* 1 */
   overflow: visible; }
+
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
+
 button,
 select {
   /* 1 */
   text-transform: none; }
+
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
+
 button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
   /* 2 */ }
+
 /**
  * Remove the inner border and padding in Firefox.
  */
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0; }
+
 /**
  * Restore the focus styles unset by the previous rule.
  */
+
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
+
 /**
  * Change the border, margin, and padding in all browsers (opinionated).
  */
+
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
+
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
+
 legend {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -304,24 +364,30 @@ legend {
   /* 3 */
   white-space: normal;
   /* 1 */ }
+
 /**
  * 1. Add the correct display in IE 9-.
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
+
 progress {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
   /* 2 */ }
+
 /**
  * Remove the default vertical scrollbar in IE.
  */
+
 textarea {
   overflow: auto; }
+
 /**
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
+
 [type="checkbox"],
 [type="radio"] {
   -webkit-box-sizing: border-box;
@@ -329,69 +395,91 @@ textarea {
   /* 1 */
   padding: 0;
   /* 2 */ }
+
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
+
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto; }
+
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
+
 [type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
   /* 2 */ }
+
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
+
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
+
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
+
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
   /* 2 */ }
+
 /* Interactive
    ========================================================================== */
+
 /*
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
+
 details,
 menu {
   display: block; }
+
 /*
  * Add the correct display in all browsers.
  */
+
 summary {
   display: list-item; }
+
 /* Scripting
    ========================================================================== */
+
 /**
  * Add the correct display in IE 9-.
  */
+
 canvas {
   display: inline-block; }
+
 /**
  * Add the correct display in IE.
  */
+
 template {
   display: none; }
+
 /* Hidden
    ========================================================================== */
+
 /**
  * Add the correct display in IE 10-.
  */
+
 [hidden] {
   display: none; }
+
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -404,6 +492,7 @@ template {
     -webkit-transform: translate(0);
             transform: translate(0);
     opacity: 1; } }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -416,6 +505,7 @@ template {
     -webkit-transform: translate(0);
             transform: translate(0);
     opacity: 1; } }
+
 @-webkit-keyframes moveInRight {
   0% {
     opacity: 0;
@@ -428,6 +518,7 @@ template {
     -webkit-transform: translate(0);
             transform: translate(0);
     opacity: 1; } }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -440,6 +531,7 @@ template {
     -webkit-transform: translate(0);
             transform: translate(0);
     opacity: 1; } }
+
 @-webkit-keyframes moveFromBottom {
   0% {
     opacity: 0;
@@ -449,6 +541,7 @@ template {
     -webkit-transform: translate(0);
             transform: translate(0);
     opacity: 1; } }
+
 @keyframes moveFromBottom {
   0% {
     opacity: 0;
@@ -458,37 +551,46 @@ template {
     -webkit-transform: translate(0);
             transform: translate(0);
     opacity: 1; } }
+
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+
 /**
  * Set up a decent box model on the root element
  */
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
+
 *,
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0; }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -496,15 +598,19 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
+
 ::selection {
   background: #b3d4fc;
   text-shadow: none; }
+
 /*
  * A better looking default horizontal rule
  */
+
 hr {
   display: block;
   height: 1px;
@@ -512,11 +618,13 @@ hr {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0; }
+
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
+
 audio,
 canvas,
 iframe,
@@ -524,118 +632,38 @@ img,
 svg,
 video {
   vertical-align: middle; }
+
 /*
  * Remove default fieldset styles.
  */
+
 fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
+
 /*
  * Allow only vertical resizing of textareas.
  */
+
 textarea {
   resize: vertical; }
+
 /* ==========================================================================
  EXAMPLE Media Queries for Responsive Design.
  These examples override the primary ('mobile first') styles.
  Modify as content requires.
  ========================================================================== */
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+
 /* ==========================================================================
  Print styles.
  Inlined to avoid the additional HTTP request:
  http://www.phpied.com/delay-loading-your-print-css/
  ========================================================================== */
-/* ==========================================================================
-   Custom CSS
-   ========================================================================== */
-body {
-  padding: 62.4px;
-  padding: 3rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #ededed; }
-/* Fonts */
-html {
-  font-size: 27.04px;
-  font-size: 1.3rem; }
-body {
-  font-family: 'Open Sans';
-  font-weight: 300;
-  line-height: 150%;
-  color: #777; }
-/**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
-.container {
-  max-width: 1180px;
-  /* 1 */
-  margin-left: auto;
-  /* 2 */
-  margin-right: auto;
-  /* 2 */
-  padding-left: 20px;
-  /* 3 */
-  padding-right: 20px;
-  /* 3 */
-  width: 100%;
-  /* 1 */ }
-.h__center-text {
-  text-align: center !important; }
-.h__mb--big {
-  margin-bottom: 166.4px !important;
-  margin-bottom: 8rem !important; }
-.h__mb--medium {
-  margin-bottom: 83.2px !important;
-  margin-bottom: 4rem !important; }
-.h__mb--small {
-  margin-bottom: 31.2px !important;
-  margin-bottom: 1.5rem !important; }
-.h__mt--big {
-  margin-top: 166.4px !important;
-  margin-top: 8rem !important; }
-.h__mt--medium {
-  margin-top: 83.2px !important;
-  margin-top: 4rem !important; }
-.h__mt--small {
-  margin-top: 31.2px !important;
-  margin-top: 1.5rem !important; }
-.row {
-  max-width: 2371.2px;
-  max-width: 114rem;
-  margin: 0 auto; }
-.row:not(:last-child) {
-    margin-bottom: 166.4px;
-    margin-bottom: 8rem; }
-.row [class^='col-'] {
-    float: left; }
-.row [class^='col-']:not(:last-child) {
-      margin-right: 124.8px;
-      margin-right: 6rem; }
-.row::after {
-    content: '';
-    clear: both;
-    display: table; }
-.row .col-1-of-2 {
-    width: calc(50% - 3rem); }
-.row .col-1-of-3 {
-    width: calc(33.33333% - 4rem); }
-.row .col-1-of-4 {
-    width: calc(25% - 4.5rem); }
-.row .col-2-of-3 {
-    width: calc(66.66667% - 2rem); }
-.row .col-2-of-4 {
-    width: calc(50% - 3rem); }
-.row .col-3-of-4 {
-    width: calc(75% - 1.5rem); }
-@media only screen and (min-width: 112.5em) {
-    html {
-      font-size: 75%; } }
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
+
 @media print {
   *,
   *:before,
@@ -686,27 +714,100 @@ body {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+/* ==========================================================================
+   Custom CSS
+   ========================================================================== */
+
+body {
+  padding: 30px;
+  padding: 3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ededed; }
+
 @media only screen and (max-width: 56.25em) {
     body {
-      padding: 0; }
+      padding: 0; } }
+
+/* Fonts */
+
+html {
+  font-size: 10px; }
+
+@media only screen and (min-width: 112.5em) {
     html {
-      font-size: 50%; }
-    .h__mb--big {
-      margin-bottom: 5rem !important; }
-    .h__mb--medium {
-      margin-bottom: 3rem !important; }
-    .row {
-      max-width: 50rem;
-      padding: 0 2rem; }
-      .row:not(:last-child) {
-        margin-bottom: 6rem; }
-        .row [class^='col-']:not(:last-child) {
-          margin-right: 0;
-          margin-bottom: 6rem; }
-      .row [class^='col-'] {
-        width: 100% !important; } }
+      font-size: 75%; } }
+
 @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
+
+@media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+    'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  line-height: 150%;
+  color: #777; }
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+
+.container {
+  max-width: 1180px;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */ }
+
+.h__center-text {
+  text-align: center !important; }
+
+.h__mb--big {
+  margin-bottom: 80px !important;
+  margin-bottom: 8rem !important; }
+
+@media only screen and (max-width: 56.25em) {
+    .h__mb--big {
+      margin-bottom: 5rem !important; } }
+
+.h__mb--medium {
+  margin-bottom: 40px !important;
+  margin-bottom: 4rem !important; }
+
+@media only screen and (max-width: 56.25em) {
+    .h__mb--medium {
+      margin-bottom: 3rem !important; } }
+
+.h__mb--small {
+  margin-bottom: 15px !important;
+  margin-bottom: 1.5rem !important; }
+
+.h__mt--big {
+  margin-top: 80px !important;
+  margin-top: 8rem !important; }
+
+.h__mt--medium {
+  margin-top: 40px !important;
+  margin-top: 4rem !important; }
+
+.h__mt--small {
+  margin-top: 15px !important;
+  margin-top: 1.5rem !important; }
 
 /*# sourceMappingURL=main.css.map */

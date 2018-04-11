@@ -1,36 +1,24 @@
-/**
- * Basic typography styles
- */
+:root {
+  --font-size-base: 10px;
+  --line-height-base: 150%;
+  --font-primary: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+    'Helvetica', 'Arial', sans-serif;
+  --font-code: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Monaco', monospace;
+  --font-monospace: 'Inconsolata', 'Menlo', 'Consolas',
+    'Bitstream Vera Sans Mono', 'Courier', monospace;
 
-//==============================================
-// Utilites/Typography
-//==============================================
-
-$google-fonts-url: 'https://fonts.googleapis.com/css?family=Exo:300,400,600,700,800,900&subset=latin-ext';
-
-// ==========================================================================
-// If YOU NEED YOUR CUSTOM FONT - use @font-fase. Uncomment from line 17
-// ==========================================================================
-// $typefaces - {map}
-// @family - {string}
-// @weight - {integer} or {keyword} i.e. 800, bold
-// @style - {keyword} i.e. normal, italic
-// @sourse - https://github.com/minamarkham/sassy-starter/blob/master/src/scss/utilities/_fonts.scss
-// @usage:
-
-// $typefaces: (
-//   'industry': (
-//    family: 'industry',
-//    weight: 100,
-//    style: normal,
-//   )
-// );
+  --font-weight-light: 100;
+  --font-weight-normal: 300;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
 
 // Scaling font size from h4 to h1
 $scale: 1.25 !default;
 
 // $base-font-size
-$font-size-base: 18px !default;
+$font-size-base: 10px !default;
 $font-size-medium: ceil(($font-size-base * $scale)) !default;
 $font-size-large: ceil(($font-size-base * $scale * 1.5)) !default;
 $font-size-small: ceil(($font-size-base / $scale)) !default;
@@ -44,28 +32,11 @@ $line-height-small: 1.5 !default;
 // Round a number down
 $line-height-count: floor(($font-size-base * $line-height-base)) !default;
 
-/// Regular font family
-/// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
-  'Helvetica', 'Arial', sans-serif !default;
-
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-  'Monaco', monospace !default;
-// or
-$font-family-monospace: 'Inconsolata', 'Menlo', 'Consolas',
-  'Bitstream Vera Sans Mono', 'Courier', monospace;
-
 // font family
 $font-family-fallback: 'Arial', sans-serif;
 $font-family-open: 'industry', sans-serif, $font-family-fallback;
 $font-family-base: $font-family-open;
 $font-family-second: $font-family-open;
-
-@if variable-exists(google-fonts-url) {
-  @import url($google-fonts-url);
-}
 
 @if variable-exists(typefaces) {
   @each $file, $option in $typefaces {

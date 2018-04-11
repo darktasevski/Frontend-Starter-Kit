@@ -2,7 +2,6 @@
 // Mixins/Centered
 //==============================================
 
-
 // Centered display-inline element
 @mixin vcenter {
   display: inline-block;
@@ -10,7 +9,7 @@
   vertical-align: middle;
 }
 
-// Fix image position 
+// Fix image position
 @mixin pad-ratio($x, $y, $selector: img) {
   position: relative;
   padding: 0 0 percentage($y/$x) 0;
@@ -28,4 +27,12 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+// Center content horizontaly and vertically on the screen
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

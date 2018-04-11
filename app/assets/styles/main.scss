@@ -9,14 +9,8 @@
 // 3. Base stuff
 @import 'base/index';
 
-// 4. Layout-related sections
-@import 'layout/index';
-
-// 5. Components
+// 4. Components
 @import 'components/index';
 
-// 6. Page-specific styles
-@import 'pages/index';
-
-// 7. Themes
-@import 'themes/index';
+// 5. Module-specific styles
+@import 'modules/index';
