@@ -1,3 +1,63 @@
+@font-face {
+  font-family: monospace;
+  font-style: italic;
+  font-weight: 400;
+  src: local("Menlo Italic"),local(Menlo-Italic),local("Consolas Italic"),local(Consolas-Italic),local("Courier New Italic"); }
+
+@font-face {
+  font-family: monospace;
+  font-style: italic;
+  font-weight: 700;
+  src: local("Menlo Bold Italic"),local(Menlo-BoldItalic),local(Monaco),local("Consolas Bold Italic"),local(Consolas-BoldItalic),local("Courier New Bold Italic"); }
+
+@font-face {
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Menlo Regular"),local(Menlo-Regular),local(Monaco),local(Consolas),local("Courier New"); }
+
+@font-face {
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Menlo Bold"),local(Menlo-Bold),local(Monaco),local("Consolas Bold"),local(Consolas-Bold),local("Courier New Bold"); }
+
+@font-face {
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  src: local("Helvetica Neue Light Italic"),local(HelveticaNeue-LightItalic),local("Helvetica Light Oblique"),local(Helvetica-LightOblique); }
+
+@font-face {
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  src: local("Helvetica Neue Italic"),local(HelveticaNeue-Italic),local("Helvetica Oblique"),local(Helvetica-Oblique); }
+
+@font-face {
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  src: local("Helvetica Neue Bold Italic"),local(HelveticaNeue-BoldItalic),local("Helvetica Bold Oblique"),local(Helvetica-BoldOblique); }
+
+@font-face {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Helvetica Neue Light"),local(HelveticaNeue-Light),local("Helvetica Light"),local(Helvetica-Light); }
+
+@font-face {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local(HelveticaNeue),local(Helvetica); }
+
+@font-face {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Helvetica Neue Bold"),local(HelveticaNeue-Bold),local("Helvetica Bold"),local(Helvetica-Bold); }
+
 /*CSS3 Variables*/
 
 :root {
@@ -724,8 +784,9 @@ body {
   padding: 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #ededed;
-  background-image: url('/assets/images/wp.jpg');
+  background-color: #2d2d2d;
+  height: 540px;
+  background-image: url('/assets/images/wp.jpg?162b5d496f7');
   background-repeat: no-repeat;
   background-size: cover; }
 

@@ -194,10 +194,12 @@ textarea {
    Custom CSS
    ========================================================================== */
 
+// This just for testing purposes
 body {
   padding: 3rem;
   box-sizing: border-box;
-  background-color: $light-grey;
+  background-color: #2d2d2d;
+  height: height('wp.jpg', 2);
   background-image: resolve('wp.jpg');
   background-repeat: no-repeat;
   background-size: cover;
